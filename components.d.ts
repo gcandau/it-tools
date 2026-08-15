@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     '404.page': typeof import('./src/pages/404.page.vue')['default']
     About: typeof import('./src/pages/About.vue')['default']
+    AiTextDetector: typeof import('./src/tools/ai-text-detector/ai-text-detector.vue')['default']
     AiWatermarkRemover: typeof import('./src/tools/ai-watermark-remover/ai-watermark-remover.vue')['default']
     App: typeof import('./src/App.vue')['default']
     AsciiTextDrawer: typeof import('./src/tools/ascii-text-drawer/ascii-text-drawer.vue')['default']

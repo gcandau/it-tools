@@ -66,6 +66,14 @@ tools:
     text: Texte
     data: Données
 
+  ai-text-detector:
+    title: "Détecteur de texte généré par IA"
+    description: >-
+      Analyse un texte à la recherche de marqueurs cachés et de signaux stylistiques : caractères
+      invisibles, résidus d'interfaces de chat, variabilité de la longueur des phrases, diversité
+      lexicale et tournures associées aux IA. Un analyseur de style, pas une preuve : lisez
+      l'avertissement sur la fiabilité avant de vous en servir.
+
   ai-watermark-remover:
     title: "Suppression de filigranes d'IA"
     description: >-

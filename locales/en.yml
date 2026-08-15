@@ -72,6 +72,13 @@ tools:
     text: Text
     data: Data
 
+  ai-text-detector:
+    title: AI text detector
+    description: >-
+      Analyse a text for hidden AI markers and stylistic signals — invisible characters, chat
+      interface residue, sentence-length burstiness, lexical diversity and AI-associated phrasing.
+      A style analyser, not evidence: read the accuracy warning before using it for anything.
+
   ai-watermark-remover:
     title: AI watermark remover
     description: >-

@@ -126,12 +126,14 @@ const keptFindings = computed(() =>
 <template>
   <div>
     <c-card title="Text to clean">
+      <!-- Deliberately not autosized: a long pasted text would otherwise push the report and the
+           decoded payload below the fold. -->
       <c-input-text
         v-model:value="input"
-
         rows="8"
-
-        autosize raw-text multiline monospace
+        raw-text
+        multiline
+        monospace
         placeholder="Paste the text here..."
         test-id="input"
       />

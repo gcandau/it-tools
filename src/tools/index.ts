@@ -1,3 +1,4 @@
+import { tool as aiTextDetector } from './ai-text-detector';
 import { tool as aiWatermarkRemover } from './ai-watermark-remover';
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
@@ -92,7 +93,7 @@ import { tool as yamlViewer } from './yaml-viewer';
 export const toolsByCategory: ToolCategory[] = [
   {
     name: 'AI',
-    components: [aiWatermarkRemover],
+    components: [aiWatermarkRemover, aiTextDetector],
   },
   {
     name: 'Crypto',
