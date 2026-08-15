@@ -60,16 +60,528 @@ search:
 tools:
   categories:
     favorite-tools: 'Your favorite tools'
+    ai: AI
     crypto: Crypto
     converter: Converter
     web: Web
     images and videos: 'Images & Videos'
     development: Development
     network: Network
+    date & time: 'Date & time'
     math: Math
     measurement: Measurement
     text: Text
     data: Data
+
+  json-to-typescript:
+    title: Json to Typescript
+    description: Convert JSON to Typescript code
+    texts:
+      message-provided-json-is-not-valid: Provided JSON is not valid.
+      title-json-to-typescript: JSON to Typescript
+      placeholder-put-your-json-string-here: Put your json string here...
+      label-json-to-typescript: JSON to Typescript
+      label-root-name: Root Name
+      title-your-typescript-code: Your Typescript code
+      tag-use-interfaces-only: Use Interfaces Only
+      tag-transform-property-names-to-javascripty: Transform Property Names to JavaScripty
+      tag-explicitly-name-unions: Explicitly Name Unions
+      tag-verify-json-parse-results-at-runtime: Verify JSON.parse results at runtime
+      tag-use-union-type-instead-of-enum: Use Union Type Instead of Enum
+      tag-use-types-instead-of-interfaces: Use Types Instead of Interfaces
+      tag-use-string-instead-of-enum-for-single-value-enums: Use String Instead of Enum for Single Value Enums
+      tag-use-readonly-type-members: Use Readonly Type Members
+      tag-make-all-properties-optional: Make All Properties Optional
+
+  passphrase-generator:
+    title: Passphrase Generator
+    description: Generate random memoizable Passphrases
+    texts:
+      text-passphrase-s-copied-to-clipboard: Passphrase(s) copied to clipboard!
+      label-add-numbers-after-x-words: Add numbers after X words
+      label-max-passphrase-len: Max passphrase len
+      label-capitalize: Capitalize
+      label-separator: Separator
+      placeholder-put-separator-char: Put separator char
+      label-ending-salt-chars: Ending Salt Chars
+      placeholder-put-characters-to-appended-to-end-of-passphrase: Put characters to appended to end of passphrase
+      label-number-of-passphrase-to-generate: Number of passphrase to generate
+      placeholder-passphrase: Passphrase...
+      tag-copy: Copy
+      tag-refresh: Refresh
+      cannot-generate-a-passphrase-of-minlen-value-maxlen-value-characters-please-retry:
+        "# Cannot generate a passphrase of [{0} - {1}] characters with current
+        settings, try to change words count"
+      words-words: Words ({0})
+      label-min-passphrase-len: "Min passphrase len:"
+
+  luhn-validator:
+    title: Luhn Validator
+    description: Check and generate key for identifier validated by a Luhn checknum
+    texts:
+      label-is-valid: Is valid ?
+      label-luhn-key: Luhn Key
+      label-value-with-luhn-key: Value with Luhn Key
+      placeholder-enter-a-luhn-validated-value: Enter a 'Luhn validated' value...
+      label-probably-correct: Probably correct
+      title-infos: Infos
+      tag-invalid-luhn-key: Invalid Luhn Key.
+
+  sla-calculator:
+    title: SLA calculator
+    description: Service Level Agreement Calcultator
+    texts:
+      message-invalid-duration: Invalid duration
+      title-sla-to-downtimes: SLA to downtimes
+      label-agreed-sla: Agreed SLA
+      label-daily-downtime: Daily downtime
+      label-weekly-downtime: Weekly downtime
+      label-monthly-downtime: Monthly downtime
+      label-quarterly-downtime: Quarterly downtime
+      label-yearly-downtime: Yearly downtime
+      title-downtime-to-sla: Downtime to SLA
+      label-downtime-duration: Downtime duration
+      placeholder-put-downtime-duration-here: Put downtime duration here...
+      label-daily-sla: Daily SLA
+      label-weekly-sla: Weekly SLA
+      label-monthly-sla: Monthly SLA
+      label-quarterly-sla: Quarterly SLA
+      label-yearly-sla: Yearly SLA
+      title-weekdays-hours: Weekdays hours
+      label-monday: Monday
+      label-tuesday: Tuesday
+      label-wednesday: Wednesday
+      label-thursday: Thursday
+      label-friday: Friday
+      label-saturday: Saturday
+      label-sunday: Sunday
+
+  many-units-converter:
+    title: Many Units Converter
+    description: Convert all kind of units
+    texts:
+      label-units-expression: Units expression
+      placeholder-please-enter-an-unit-expression-ie-1d-2m: Please enter an unit expression, ie '1d 2m'
+      label-target-unit: "Target Unit:"
+      placeholder-select-the-target-unit: Select the target unit
+      title-result: Result
+      label-best-target-unit: Best Target Unit
+      label-selected-target-unit-outputunit: Selected Target Unit ({0})
+      title-other-units-conversion-tools: Other Units Conversion Tools
+
+  duration-calculator:
+    title: Duration Calculator
+    description: Calculate/parse durations
+    texts:
+      label-duration-s: Duration(s)
+      placeholder-please-enter-duration-one-per-line-with-optional-sign: Please enter duration, one per line with optional sign
+      title-total: Total
+      label-prettified: Prettified
+      label-prettified-full: Prettified (full)
+      label-prettified-colon: Prettified (colon)
+      label-prettified-days: Prettified (days)
+      label-prettified-hours: Prettified (hours)
+      label-prettified-iso8601: Prettified (ISO8601)
+      label-milliseconds: Milliseconds
+      label-seconds: Seconds
+      label-minutes: Minutes
+      label-hours: Hours
+      label-days: Days
+      label-weeks: Weeks
+      label-years: Years
+      title-lines-errors: Lines errors
+      tag-supports-comment-line-hh-mm-ss-fff-3d-1h-3s-p4dt12h20m20-3s:
+        "Supports: comment (# line), HH:MM:SS.FFF, 3d 1h 3s...,
+        P4DT12H20M20.3S.."
+
+  timezone-converter:
+    title: Timezone Converter
+    description: Convert Date-Time from a timezone to others and get timezone vs
+      countries infos
+    texts:
+      title-timezones-date-time-converter: Timezones Date-Time Converter
+      label-timezone: Timezone
+      label-date-time-interval-to-convert: "Date/time interval to convert:"
+      label-current-timezone-offset: "Current Timezone Offset:"
+      label-use-24-hour-time-format: Use 24 hour time format
+      title-date-time-in-other-timezones: Date-Time in other timezones
+      placeholder-please-select-a-timezone: Please select a timezone
+      title-country-to-timezones: Country to Timezones
+      label-country: Country
+      title-timezones-to-countries: Timezones to Countries
+
+  port-numbers:
+    title: Port Numbers
+    description: Search for assigned usage of a given port and protocol
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      title-port-search: Port search
+      label-port-number: Port number
+      label-protocol: Protocol
+      label-type: Type
+      label-description: Description
+
+  url-cleaner:
+    title: Url Cleaner
+    description: Clean Ads tracker, UTM, Facebook and other ads provider parameters
+      from an URL
+    texts:
+      title-clean-url: Clean url
+      placeholder-put-your-url-here: Put your url here...
+      label-url-to-clean: Url to clean
+      label-cleaned-url: Cleaned url
+      placeholder-the-cleaned-url-will-be-here: The cleaned url will be here
+      tag-is-clean: Is clean
+      tag-was-not-clean: Was not clean
+
+  ip-range-to-cidr:
+    title: IPv4/6 Range to CIDR(s) Calculator
+    description: Calculate CIDR(s) from an IP Range (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-address: Invalid ipv4/6 address
+      label-start-address: Start address
+      placeholder-start-ipv4-6-address: Start IPv4/6 address...
+      label-end-address: End address
+      placeholder-end-ipv4-6-address: End IPv4/6 address...
+      title-cidr: CIDR
+      title-invalid-combination-of-start-and-end-ipv4-6-address: Invalid combination of start and end IPv4/6 address
+      title-invalid-combination-of-ip-version-4-6: Invalid combination of IP version 4/6
+      tag-switch-start-and-end-ipv4-6-address: Switch start and end IPv4/6 address
+      tag-start-ip-and-end-ip-must-be-of-same-version-ipv4-or-ipv6: "Start IP and End IP must be of same version: IPv4 or IPv6"
+
+  ip-cidr-to-range:
+    title: Ipv4/6 CIDR to IP Range Calculator
+    description: Calculate IP Range from a CIDR (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-cidr: Invalid ipv4/6 CIDR
+      label-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (ie, 1.0.0.0/23 or 1.1.1.1/255.255.252.0 or 1.1.1.1-2.2.2.2
+        or 10.0.0.*)
+      placeholder-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (ie, 1.0.0.0/23  or 1.1.1.1/255.255.252.0 or 1.1.1.1-2.2.2.2
+        or 10.0.0.*)
+      title-resulting-cidr: Resulting CIDR
+      label-cidr: CIDR
+      title-ipv4-6-range: IPv4/6 range
+      label-start-ip-address: Start IP Address
+      label-end-ip-address: End IP Address
+      label-network-type: Network type
+
+  ipv6-subnet-calculator:
+    title: Ipv6 subnet calculator
+    description: Parse your IPv6 CIDR blocks and get all the info you need about
+      your sub network.
+    texts:
+      message-we-cannot-parse-this-address-check-the-format: We cannot parse this address, check the format
+      label-full-address: Full address
+      label-short-address: Short address
+      label-address-as-binary: Address as binary
+      label-address-as-integer: Address as integer
+      label-address-as-decimal: Address as decimal
+      label-address-as-hex: Address as hex
+      label-network-mask-size: Network mask size
+      label-network-mask: Network mask
+      label-network-mask-as-integer: Network mask as integer
+      label-network-mask-as-binary: Network mask as binary
+      label-total-ip-addresses: Total IP addresses
+      label-total-networks: Total networks
+      label-first-address: First address
+      label-last-address: Last address
+      label-scope: Scope
+      label-6to4-properties: 6to4 Properties
+      label-teredo-properties: Teredo Properties
+      label-arpa: ARPA
+      label-microsoft-unc-transcription: Microsoft UNC Transcription
+      label-type: Type
+      label-an-ipv6-address-with-or-without-mask: An IPv6 address with or without mask
+      placeholder-the-ipv6-address: The ipv6 address...
+
+  markdown-toc-generator:
+    title: Markdown toc generator
+    description: Generate a TOC from a markdown file/content
+    texts:
+      title-options: Options
+      label-max-heading-level: "Max Heading Level:"
+      placeholder-max-heading-level: Max Heading Level...
+      label-bullet-chars: Bullet Chars
+      placeholder-bullet-chars: Bullet Chars
+      label-anchors-prefix: Anchors Prefix
+      placeholder-anchors-prefix: Anchors Prefix
+      label-indents: "Indents: "
+      placeholder-indents: Indents...
+      label-comment-styles: Comment Styles
+      placeholder-comment-styles: Comment Styles
+      title-input-markdown: Input markdown
+      placeholder-put-your-markdown-here: Put your markdown here...
+      title-output-markdown-with-toc: Output markdown with TOC
+      tag-generate-anchors: Generate Anchors
+      tag-advanced: Advanced
+      tag-concat-spaces: Concat Spaces
+      tag-you-can-paste-a-document-with-existing-toc-generated-by-this-tool-or-add-a:
+        You can paste a document with existing TOC (generated by this tool) or
+        add a
+      tag-marker-in-your-document-on-a-single-line: marker in your document (on a single line)
+
+  html-cleaner:
+    title: HTML cleaner
+    description: Clean HTML
+    texts:
+      placeholder-your-html-content: Your HTML content...
+      label-your-html-to-clean-can-paste-from-clipboard: "Your HTML to clean (can paste from clipboard):"
+      label-output-cleaned-html: "Output cleaned HTML:"
+
+  json-sort-master:
+    title: JSON sort master
+    description: Sort your JSON by keys and values.
+    texts:
+      message-provided-json-is-not-valid: Provided JSON is not valid.
+      label-key-name: "Key Name:"
+      label-key-value: Key Value
+      label-key-name-descending: Key Name (Descending)
+      label-key-value-descending: Key Value (Descending)
+      label-sort-method: Sort Method
+      label-your-raw-json: Your raw JSON
+      placeholder-paste-your-raw-json-here: Paste your raw JSON here...
+      label-sorted-version-of-your-json: Sorted version of your JSON
+
+  json-escaper:
+    title: Json Escaper/Unescaper
+    description: Escape and unescape JSON string
+    texts:
+      title-escape-json-string: Escape JSON string
+      placeholder-put-your-string-to-escape: Put your string to escape...
+      label-string-to-escape: String to escape
+      label-escaped-string: Escaped string
+      title-unescape-json-string: Unescape JSON string
+      placeholder-put-your-string-to-unescape: Put your string to unescape...
+      label-string-to-unescape: String to unescape
+      label-unescaped-string: Unescaped string
+      label-wrap-in-quotes: Wrap in quotes
+
+  json-to-schema:
+    title: Json to Schema
+    description: Convert JSON data to JSON Schema, MySQL DDL, Mongoose Schema,
+      Google BigQuery schema or ClickHouse Table Schema
+    texts:
+      label-generic: Generic
+      label-json-schema: JSON Schema
+      label-mysql-table-schema: MySQL Table Schema
+      label-mongoose-schema: Mongoose Schema
+      label-google-bigquery-schema: Google BigQuery schema
+      label-clickhouse-table-schema: ClickHouse Table Schema
+      message-provided-json-is-not-valid: Provided JSON is not valid.
+      placeholder-target-schema-format: Target Schema format
+      label-table-name: Table Name
+      placeholder-table-name: Table Name
+      input-label-your-json: Your JSON
+      input-placeholder-paste-your-json-here: Paste your JSON here...
+      output-label-your-schema: Your schema
+
+  html-to-markdown:
+    title: HTML to markdown
+    description: Convert HTML (either from clipboard) to Markdown
+    texts:
+      placeholder-your-html-content: Your HTML content...
+      label-your-html-to-convert-can-paste-from-clipboard: "Your HTML to convert (can paste from clipboard):"
+      label-output-markdown: "Output markdown:"
+      label-heading-style: "Headings Style:"
+      label-emphasis-style: "Emphasis Style:"
+      label-hash: Hash (#)
+      label-underline: Underline (=/-)
+      label-surround-heading: Surround (= Heading =)
+      label-asterisk: Asterisk (*)
+      label-underscore: Underscore (_)
+      label-tilde: Tilde (~)
+
+  punycode-converter:
+    title: Punycode Converter
+    description: Convert international unicode domain names or emails from/to ASCII
+      Punycode version
+    texts:
+      title-punycode-to-international: Punycode to International
+      placeholder-put-your-punycode-domain-name-or-email-to-decode: Put your punycode domain name or email to decode...
+      label-punycode-domain-name-email: Punycode Domain name/Email
+      label-decoded-domain-name-email: Decoded Domain name/Email
+      title-international-to-punycode: International to Punycode
+      placeholder-put-your-international-domain-or-email-name-here: Put your international domain or email name here...
+      label-domain-name-or-email-to-encode: Domain name or email to encode
+
+  morse-converter:
+    title: Morse Code Converter
+    description: Encode/Decode to Morse code
+    texts:
+      title-encode: Encode
+      label-your-text: "Your text:"
+      placeholder-the-string-to-encode: The string to encode
+      label-your-text-encoded-to-morse-code: "Your text encoded to Morse code:"
+      placeholder-your-string-encoded: Your string encoded
+      title-decode: Decode
+      label-your-morse-encoded-text: "Your Morse encoded text:"
+      placeholder-the-string-to-decode: The string to decode
+      title-error-while-decoding: Error while decoding
+      label-your-decoded-text: "Your decoded text:"
+      placeholder-your-string-decoded: Your string decoded
+
+  list-comparer:
+    title: Lists Comparer
+    description: Compare two list items
+    texts:
+      label-trim-items: Trim items
+      label-ignore-case: Ignore case
+      label-separator: Separator
+      placeholder-additional-separator: Additional separator
+      label-list-1: List 1
+      label-list-2: List 2
+      title-items-in-both-lists: Items in both lists
+      title-items-in-list-1-but-not-in-list-2: Items in List 1 but not in List 2
+      title-items-in-list-2-but-not-in-list-1: Items in List 2 but not in List 1
+
+  smart-text-replacer:
+    title: Smart Text Replacer and Linebreaker
+    description: Search and replace a word on single or multiple occurrences just
+      like windows notepad search and replace. Also allows to manage
+      linebreaking and text splitting
+    texts:
+      label-add-linebreak-before: Add linebreak before
+      label-add-linebreak-after: Add linebreak after
+      label-add-linebreak-in-place-of: Add linebreak in place of
+      placeholder-enter-text-here: Enter text here...
+      label-text-to-search-and-replace: "Text to search and replace:"
+      placeholder-search-regex: Search regex
+      placeholder-replacement-expression: Replacement expression
+      placeholder-split-text-regex: Split text regex
+      label-split-every-characters: "Split every characters:"
+      tag-find-what: "Find what:"
+      tag-replace-with: "Replace with:"
+      tag-find-next: Find Next
+      tag-replace: Replace
+      tag-replace-all: Replace All
+      tag-match-case: Match case
+      tag-keep-linebreaks: Keep linebreaks
+
+  sensitive-data-masker:
+    title: Sensitive data masker
+    description: Clean sensitive data from textual content (ie logs)
+    texts:
+      label-your-custom-cleaning-regex-es-case-insensitive: "Your custom cleaning regex(es) (case insensitive):"
+      placeholder-your-custom-cleaning-regex-es: Your custom cleaning regex(es)
+      placeholder-no-fallback: No Fallback
+      input-label-your-log-textual-data: "Your log/textual data:"
+      input-placeholder-paste-your-log-textual-data-here: Paste your log/textual data here...
+      output-label-cleaned-version: "Cleaned version:"
+
+  htpasswd-generator:
+    title: Htpasswd/htaccess generator
+    description: htpassword/htaccess user/password generator
+    texts:
+      label-bcrypt: Bcrypt
+      label-md5: MD5
+      label-apache-md5-apr1: Apache MD5 (apr1)
+      label-sha256: SHA256
+      label-sha512: SHA512
+      label-username: Username
+      placeholder-your-username: Your username...
+      label-password: Password
+      placeholder-your-password: Your password...
+      label-hash-method: "Hash method:"
+      label-salt-rounds: "Salt rounds: "
+      placeholder-salt-rounds: Salt rounds...
+      label-htpasswd-content: "htpasswd content:"
+    service:
+      text:
+        unsupported-algorithm: Unsupported algorithm
+        md5-does-not-currently-support-non-ascii-characters-0: MD5 does not currently support non ASCII characters
+        md5-does-not-currently-support-non-ascii-characters: MD5 does not currently support non ASCII characters
+
+  crc-calculator:
+    title: CRC calculator
+    description: Compute text or file CRC (CRC1, CRC8, CRC8 1-Wire, CRC8 DVB-S2,
+      CRC16, CRC16 CCITT, CRC16 Modbus, CRC16 Kermit, CRC16 XModem, CRC24,
+      CRC32, CRC32 MPEG-2, CRCJAM)
+    texts:
+      label-binary-base-2: Binary (base 2)
+      label-hexadecimal-base-16: Hexadecimal (base 16)
+      label-base64-base-64: Base64 (base 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 with url safe chars)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Drag and drop a file here, or click to select a file
+      placeholder-paste-string-to-crc: Paste string to CRC...
+      label-your-text-to-crc: "Your text to CRC:"
+      label-digest-encoding: Digest encoding
+      tag-or: OR
+      tag-an-error-occured-hashing-file: An error occured hashing file.
+
+  file-hasher:
+    title: File Hasher
+    description: Compute Hash of files
+    texts:
+      label-binary-base-2: Binary (base 2)
+      label-hexadecimal-base-16: Hexadecimal (base 16)
+      label-base64-base-64: Base64 (base 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 with url safe chars)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Drag and drop a file here, or click to select a file
+      label-digest-encoding: Digest encoding
+      tag-createblake2b-bits-number-key-idatatype-promise: "createBLAKE2b, // (bits?: number, key?: IDataType): Promise"
+      tag-createmd5-promise: "createMD5, // (): Promise"
+      tag-createripemd160-promise: "createRIPEMD160, // (): Promise"
+      tag-createsha1-promise: "createSHA1, // (): Promise"
+      tag-createsha224-promise: "createSHA224, // (): Promise"
+      tag-createsha256-promise: "createSHA256, // (): Promise"
+      tag-createsha512-promise: "createSHA512, // (): Promise"
+      tag-createsm3-promise: "createSM3, // (): Promise"
+      tag-createwhirlpool-promise: "createWhirlpool, // (): Promise"
+      tag-createxxhash32-seed-number-promise: "// createXXHash32, //(seed: number): Promise"
+      tag-createxxhash64-seedlow-number-seedhigh-number-promise: "// createXXHash64, //(seedLow: number, seedHigh: number): Promise"
+      tag-createxxhash3-seedlow-number-seedhigh-number-promise: "// createXXHash3, //(seedLow: number, seedHigh: number): Promise"
+      tag-createxxhash128-seedlow-number-seedhigh-number-promise: "// createXXHash128, //(seedLow: number, seedHigh: number): Promise"
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise:
+        "BLAKE2b: await createBLAKE2b(), // (bits?: number, key?: IDataType):
+        Promise"
+      tag-md5-await-createmd5-promise: "MD5: await createMD5(), // (): Promise"
+      tag-ripemd160-await-createripemd160-promise: "RIPEMD160: await createRIPEMD160(), // (): Promise"
+      tag-sha1-await-createsha1-promise: "SHA1: await createSHA1(), // (): Promise"
+      tag-sha224-await-createsha224-promise: "SHA224: await createSHA224(), // (): Promise"
+      tag-sha256-await-createsha256-promise: "SHA256: await createSHA256(), // (): Promise"
+      tag-sha512-await-createsha512-promise: "SHA512: await createSHA512(), // (): Promise"
+      tag-sm3-await-createsm3-promise: "SM3: await createSM3(), // (): Promise"
+      tag-whirlpool-await-createwhirlpool-promise: "Whirlpool: await createWhirlpool(), // (): Promise"
+
+  argon2-hash:
+    title: Argon2 Hasher
+    description: Compute Argon2 hashes with parameters
+    texts:
+      label-argon2id: Argon2id
+      label-argon2i: Argon2i
+      label-argon2d: Argon2d
+      label-hex: Hex
+      label-encoded: Encoded
+      label-binary: Binary
+      label-algorithm: "Algorithm:"
+      label-password: "Password:"
+      placeholder-enter-password: Enter password
+      label-salt-hex: "Salt (hex):"
+      placeholder-optional-hex-salt: Optional hex salt
+      label-iterations: "Iterations:"
+      label-memory-kib: "Memory (KiB):"
+      label-parallelism: "Parallelism:"
+      label-hash-length: "Hash length:"
+      label-output-type: "Output type:"
+      title-argon2-hash: Argon2 Hash
+      tag-generate: Generate
+
+  ai-text-detector:
+    title: AI text detector
+    description: >-
+      Analyse a text for hidden AI markers and stylistic signals — invisible characters, chat
+      interface residue, sentence-length burstiness, lexical diversity and AI-associated phrasing.
+      A style analyser, not evidence: read the accuracy warning before using it for anything.
+
+  ai-watermark-remover:
+    title: AI watermark remover
+    description: >-
+      Detect and remove invisible Unicode characters, hidden Tags-block payloads, homoglyphs and
+      non-ASCII typography from a text. Decodes smuggled messages and reports exactly what was
+      changed. Runs entirely in your browser.
 
   password-strength-analyser:
     title: Password strength analyser

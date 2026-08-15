@@ -7,6 +7,8 @@ export interface Tool {
   keywords: string[]
   component: () => Promise<Component>
   icon: Component
+  /** How the tool is described when reached over the HTTP API. */
+  externAccessDescription?: string
   redirectFrom?: string[]
   isNew: boolean
   createdAt?: Date

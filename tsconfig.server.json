@@ -1,0 +1,23 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  // Only the server roots are listed: TypeScript then follows imports, so exactly the tool services
+  // the API actually uses get checked. Including all of `src` would drag in Vue auto-imports,
+  // virtual PWA/icon modules and SFCs that this project checks with vue-tsc instead.
+  "include": ["server/**/*.ts", "api/**/*.ts"],
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "target": "es2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      // yaml ships types but its exports map hides them from bundler resolution.
+      "yaml": ["./node_modules/yaml/dist/index.d.ts"]
+    },
+    "types": ["node"],
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}

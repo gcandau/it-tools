@@ -66,7 +66,506 @@ tools:
     images and videos: 'Imagens & Vídeos'
     development: 'Desenvolvimento'
     network: 'Rede'
+    date & time: 'Data e hora'
     math: 'Matemática'
     measurement: 'Medidas'
     text: 'Texto'
     data: 'Dados'
+  json-to-typescript:
+    title: JSON para Typescript
+    description: Converter JSON em código Typescript
+    texts:
+      message-provided-json-is-not-valid: O JSON fornecido não é válido.
+      title-json-to-typescript: JSON para Typescript
+      placeholder-put-your-json-string-here: Coloque sua string json aqui...
+      label-json-to-typescript: JSON para Typescript
+      label-root-name: Nome da raiz
+      title-your-typescript-code: Seu código Typescript
+      tag-use-interfaces-only: Use somente interfaces
+      tag-transform-property-names-to-javascripty: Transforme nomes de propriedades em JavaScript
+      tag-explicitly-name-unions: Nomeie explicitamente as uniões
+      tag-verify-json-parse-results-at-runtime: Verifique os resultados JSON.parse em tempo de execução
+      tag-use-union-type-instead-of-enum: Use o tipo Union em vez de Enum
+      tag-use-types-instead-of-interfaces: Use tipos em vez de interfaces
+      tag-use-string-instead-of-enum-for-single-value-enums: Use String em vez de Enum para enums de valor único
+      tag-use-readonly-type-members: Usar membros do tipo somente leitura
+      tag-make-all-properties-optional: Tornar todas as propriedades opcionais
+
+  passphrase-generator:
+    title: Gerador de Senhas
+    description: Gerar frases-senha aleatórias e memorizáveis
+    texts:
+      text-passphrase-s-copied-to-clipboard: Senha(s) copiada(s) para a área de transferência!
+      label-add-numbers-after-x-words: Adicione números após X palavras
+      label-max-passphrase-len: Comprimento máximo da senha
+      label-capitalize: Capitalizar
+      label-separator: Separador
+      placeholder-put-separator-char: Coloque o caractere separador
+      label-ending-salt-chars: Acabando com os Chars de Sal
+      placeholder-put-characters-to-appended-to-end-of-passphrase: Coloque caracteres a serem anexados ao final da frase-senha
+      label-number-of-passphrase-to-generate: Número de senhas a serem geradas
+      placeholder-passphrase: Senha...
+      tag-copy: Cópia
+      tag-refresh: Atualizar
+      cannot-generate-a-passphrase-of-minlen-value-maxlen-value-characters-please-retry:
+        "# Não é possível gerar uma senha de [{0} - {1}] caracteres com as
+        configurações atuais. Tente alterar a contagem de palavras."
+      words-words: Palavras ({0})
+      label-min-passphrase-len: "Comprimento mínimo da senha:"
+
+  luhn-validator:
+    title: Validador Luhn
+    description: Verifique e gere a chave para o identificador validado por um Luhn checknum
+    texts:
+      label-is-valid: É válido?
+      label-luhn-key: Chave Luhn
+      label-value-with-luhn-key: Valor com Luhn Key
+      placeholder-enter-a-luhn-validated-value: Insira um valor &#39;validado por Luhn&#39;...
+      label-probably-correct: Provavelmente correto
+      title-infos: Informações
+      tag-invalid-luhn-key: Chave Luhn inválida.
+
+  sla-calculator:
+    title: Calculadora de SLA
+    description: Calculadora de Acordo de Nível de Serviço
+    texts:
+      message-invalid-duration: Duração inválida
+      title-sla-to-downtimes: SLA para períodos de inatividade
+      label-agreed-sla: SLA acordado
+      label-daily-downtime: Tempo de inatividade diário
+      label-weekly-downtime: Tempo de inatividade semanal
+      label-monthly-downtime: Tempo de inatividade mensal
+      label-quarterly-downtime: Tempo de inatividade trimestral
+      label-yearly-downtime: Tempo de inatividade anual
+      title-downtime-to-sla: Tempo de inatividade para SLA
+      label-downtime-duration: Duração do tempo de inatividade
+      placeholder-put-downtime-duration-here: Coloque a duração do tempo de inatividade aqui...
+      label-daily-sla: SLA diário
+      label-weekly-sla: SLA semanal
+      label-monthly-sla: SLA mensal
+      label-quarterly-sla: SLA trimestral
+      label-yearly-sla: SLA anual
+      title-weekdays-hours: Horários durante a semana
+      label-monday: Segunda-feira
+      label-tuesday: Terça-feira
+      label-wednesday: Quarta-feira
+      label-thursday: Quinta-feira
+      label-friday: Sexta-feira
+      label-saturday: Sábado
+      label-sunday: Domingo
+
+  many-units-converter:
+    title: Conversor de muitas unidades
+    description: Converta todos os tipos de unidades
+    texts:
+      label-units-expression: Expressão de unidades
+      placeholder-please-enter-an-unit-expression-ie-1d-2m: Por favor, insira uma expressão unitária, por exemplo, &#39;1d 2m&#39;
+      label-target-unit: "Unidade alvo:"
+      placeholder-select-the-target-unit: Selecione a unidade de destino
+      title-result: Resultado
+      label-best-target-unit: Melhor Unidade Alvo
+      label-selected-target-unit-outputunit: Unidade alvo selecionada ({0})
+      title-other-units-conversion-tools: Outras ferramentas de conversão de unidades
+
+  duration-calculator:
+    title: Calculadora de Duração
+    description: Calcular/analisar durações
+    texts:
+      label-duration-s: Duração(ões)
+      placeholder-please-enter-duration-one-per-line-with-optional-sign: Por favor, insira a duração, uma por linha com sinal opcional
+      title-total: Total
+      label-prettified: Embelezado
+      label-prettified-full: Embelezado (completo)
+      label-prettified-colon: Embelezado (dois pontos)
+      label-prettified-days: Embelezado (dias)
+      label-prettified-hours: Embelezado (horas)
+      label-prettified-iso8601: Embelezado (ISO8601)
+      label-milliseconds: Milissegundos
+      label-seconds: Segundos
+      label-minutes: Minutos
+      label-hours: Horas
+      label-days: Dias
+      label-weeks: Semanas
+      label-years: Anos
+      title-lines-errors: Erros de linhas
+      tag-supports-comment-line-hh-mm-ss-fff-3d-1h-3s-p4dt12h20m20-3s:
+        "Suporta: comentário (# linha), HH:MM:SS.FFF, 3d 1h 3s...,
+        P4DT12H20M20.3S.."
+
+  timezone-converter:
+    title: Conversor de fuso horário
+    description: Converta data e hora de um fuso horário para outros e obtenha
+      informações sobre fuso horário e países
+    texts:
+      title-timezones-date-time-converter: Conversor de data e hora de fusos horários
+      label-timezone: Fuso horário
+      label-date-time-interval-to-convert: "Intervalo de data/hora para conversão:"
+      label-current-timezone-offset: "Deslocamento de fuso horário atual:"
+      label-use-24-hour-time-format: Use o formato de 24 horas
+      title-date-time-in-other-timezones: Data e hora em outros fusos horários
+      placeholder-please-select-a-timezone: Selecione um fuso horário
+      title-country-to-timezones: País para fusos horários
+      label-country: País
+      title-timezones-to-countries: Fusos horários para países
+
+  port-numbers:
+    title: Números de porta
+    description: Pesquisar o uso atribuído de uma determinada porta e protocolo
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      title-port-search: Pesquisa de porta
+      label-port-number: Número da porta
+      label-protocol: Protocolo
+      label-type: Tipo
+      label-description: Descrição
+
+  url-cleaner:
+    title: Limpador de URL
+    description: Rastreador de anúncios limpos, UTM, Facebook e outros parâmetros de
+      provedores de anúncios de uma URL
+    texts:
+      title-clean-url: URL limpa
+      placeholder-put-your-url-here: Coloque sua URL aqui...
+      label-url-to-clean: URL para limpar
+      label-cleaned-url: URL limpa
+      placeholder-the-cleaned-url-will-be-here: A URL limpa estará aqui
+      tag-is-clean: Está limpo
+      tag-was-not-clean: Não estava limpo
+
+  ip-range-to-cidr:
+    title: Calculadora de intervalo IPv4/6 para CIDR(s)
+    description: Calcular CIDR(s) de um intervalo de IP (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-address: Endereço ipv4/6 inválido
+      label-start-address: Endereço inicial
+      placeholder-start-ipv4-6-address: Iniciar endereço IPv4/6...
+      label-end-address: Endereço final
+      placeholder-end-ipv4-6-address: Fim do endereço IPv4/6...
+      title-cidr: CIDR
+      title-invalid-combination-of-start-and-end-ipv4-6-address: Combinação inválida de endereço IPv4/6 inicial e final
+      title-invalid-combination-of-ip-version-4-6: Combinação inválida de versão IP 4/6
+      tag-switch-start-and-end-ipv4-6-address: Alternar endereço IPv4/6 inicial e final
+      tag-start-ip-and-end-ip-must-be-of-same-version-ipv4-or-ipv6: "O IP inicial e o IP final devem ser da mesma versão: IPv4 ou IPv6"
+
+  ip-cidr-to-range:
+    title: Calculadora de intervalo CIDR para IP IPv4/6
+    description: Calcular intervalo de IP a partir de um CIDR (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-cidr: CIDR ipv4/6 inválido
+      label-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (ou seja, 1.0.0.0/23 ou 1.1.1.1/255.255.252.0 ou
+        1.1.1.1-2.2.2.2 ou 10.0.0.*)
+      placeholder-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (ou seja, 1.0.0.0/23 ou 1.1.1.1/255.255.252.0 ou
+        1.1.1.1-2.2.2.2 ou 10.0.0.*)
+      title-resulting-cidr: CIDR resultante
+      label-cidr: CIDR
+      title-ipv4-6-range: Intervalo IPv4/6
+      label-start-ip-address: Endereço IP inicial
+      label-end-ip-address: Endereço IP final
+      label-network-type: Tipo de rede
+
+  ipv6-subnet-calculator:
+    title: Calculadora de sub-rede IPv6
+    description: Analise seus blocos CIDR IPv6 e obtenha todas as informações
+      necessárias sobre sua sub-rede.
+    texts:
+      message-we-cannot-parse-this-address-check-the-format: Não podemos analisar este endereço, verifique o formato
+      label-full-address: Endereço completo
+      label-short-address: Endereço curto
+      label-address-as-binary: Endereço como binário
+      label-address-as-integer: Endereço como inteiro
+      label-address-as-decimal: Endereço como decimal
+      label-address-as-hex: Endereço como hexadecimal
+      label-network-mask-size: Tamanho da máscara de rede
+      label-network-mask: Máscara de rede
+      label-network-mask-as-integer: Máscara de rede como inteiro
+      label-network-mask-as-binary: Máscara de rede como binária
+      label-total-ip-addresses: Total de endereços IP
+      label-total-networks: Redes totais
+      label-first-address: Primeiro endereço
+      label-last-address: Último endereço
+      label-scope: Escopo
+      label-6to4-properties: Propriedades 6to4
+      label-teredo-properties: Propriedades Teredo
+      label-arpa: ARPA
+      label-microsoft-unc-transcription: Transcrição da Microsoft UNC
+      label-type: Tipo
+      label-an-ipv6-address-with-or-without-mask: Um endereço IPv6 com ou sem máscara
+      placeholder-the-ipv6-address: O endereço IPv6...
+
+  markdown-toc-generator:
+    title: Gerador de índice de marcação
+    description: Gerar um TOC a partir de um arquivo/conteúdo markdown
+    texts:
+      title-options: Opções
+      label-max-heading-level: "Nível máximo de direção:"
+      placeholder-max-heading-level: Nível máximo de direção...
+      label-bullet-chars: Caracteres de bala
+      placeholder-bullet-chars: Caracteres de bala
+      label-anchors-prefix: Prefixo de âncoras
+      placeholder-anchors-prefix: Prefixo de âncoras
+      label-indents: "Recuos: "
+      placeholder-indents: Recuos...
+      label-comment-styles: Estilos de comentários
+      placeholder-comment-styles: Estilos de comentários
+      title-input-markdown: Markdown de entrada
+      placeholder-put-your-markdown-here: Coloque seu desconto aqui...
+      title-output-markdown-with-toc: Saída de markdown com TOC
+      tag-generate-anchors: Gerar âncoras
+      tag-advanced: Avançado
+      tag-concat-spaces: Espaços Concat
+      tag-you-can-paste-a-document-with-existing-toc-generated-by-this-tool-or-add-a:
+        Você pode colar um documento com TOC existente (gerado por esta
+        ferramenta) ou adicionar um
+      tag-marker-in-your-document-on-a-single-line: marcador no seu documento (em uma única linha)
+
+  html-cleaner:
+    title: Limpador de HTML
+    description: HTML limpo
+    texts:
+      placeholder-your-html-content: Seu conteúdo HTML...
+      label-your-html-to-clean-can-paste-from-clipboard: "Seu HTML para limpar (pode colar da área de transferência):"
+      label-output-cleaned-html: "Saída HTML limpa:"
+
+  json-sort-master:
+    title: Mestre de classificação JSON
+    description: Ordene seu JSON por chaves e valores.
+    texts:
+      message-provided-json-is-not-valid: O JSON fornecido não é válido.
+      label-key-name: "Nome da chave:"
+      label-key-value: Valor-chave
+      label-key-name-descending: Nome da chave (decrescente)
+      label-key-value-descending: Valor-chave (decrescente)
+      label-sort-method: Método de classificação
+      label-your-raw-json: Seu JSON bruto
+      placeholder-paste-your-raw-json-here: Cole seu JSON bruto aqui...
+      label-sorted-version-of-your-json: Versão classificada do seu JSON
+
+  json-escaper:
+    title: Json Escaper/Unescaper
+    description: Escape e escape de string JSON
+    texts:
+      title-escape-json-string: Escape de sequência JSON
+      placeholder-put-your-string-to-escape: Coloque sua corda para escapar...
+      label-string-to-escape: Corda para escapar
+      label-escaped-string: String escapada
+      title-unescape-json-string: String JSON sem escape
+      placeholder-put-your-string-to-unescape: Coloque sua corda para escapar...
+      label-string-to-unescape: String para desfazer o escape
+      label-unescaped-string: String sem escape
+      label-wrap-in-quotes: Coloque entre aspas
+
+  json-to-schema:
+    title: Json para esquema
+    description: Converter dados JSON em esquema JSON, MySQL DDL, esquema Mongoose,
+      esquema Google BigQuery ou esquema de tabela ClickHouse
+    texts:
+      label-generic: Genérico
+      label-json-schema: Esquema JSON
+      label-mysql-table-schema: Esquema de tabela MySQL
+      label-mongoose-schema: Esquema Mongoose
+      label-google-bigquery-schema: Esquema do Google BigQuery
+      label-clickhouse-table-schema: Esquema de tabela do ClickHouse
+      message-provided-json-is-not-valid: O JSON fornecido não é válido.
+      placeholder-target-schema-format: Formato do esquema de destino
+      label-table-name: Nome da tabela
+      placeholder-table-name: Nome da tabela
+      input-label-your-json: Seu JSON
+      input-placeholder-paste-your-json-here: Cole seu JSON aqui...
+      output-label-your-schema: Seu esquema
+
+  html-to-markdown:
+    title: HTML para markdown
+    description: Converter HTML (da área de transferência) para Markdown
+    texts:
+      placeholder-your-html-content: Seu conteúdo HTML...
+      label-your-html-to-convert-can-paste-from-clipboard: "Seu HTML para converter (pode colar da área de transferência):"
+      label-output-markdown: "Markdown de saída:"
+      label-heading-style: "Estilo dos títulos:"
+      label-emphasis-style: "Estilo de ênfase:"
+      label-hash: Cerquilha (#)
+      label-underline: Sublinhar (=/-)
+      label-surround-heading: Cercar (= Título =)
+      label-asterisk: Asterisco (*)
+      label-underscore: Sublinhado (_)
+      label-tilde: Til (~)
+
+  punycode-converter:
+    title: Conversor Punycode
+    description: Converter nomes de domínio Unicode internacionais ou e-mails
+      de/para a versão ASCII Punycode
+    texts:
+      title-punycode-to-international: Punycode para Internacional
+      placeholder-put-your-punycode-domain-name-or-email-to-decode: Coloque seu nome de domínio ou e-mail do Punycode para decodificar...
+      label-punycode-domain-name-email: Nome de domínio/e-mail do Punycode
+      label-decoded-domain-name-email: Nome de domínio/e-mail decodificado
+      title-international-to-punycode: Internacional para Punycode
+      placeholder-put-your-international-domain-or-email-name-here: Coloque seu domínio internacional ou nome de e-mail aqui...
+      label-domain-name-or-email-to-encode: Nome de domínio ou e-mail para codificar
+
+  morse-converter:
+    title: Conversor de código Morse
+    description: Codificar/Decodificar para código Morse
+    texts:
+      title-encode: Codificar
+      label-your-text: "Seu texto:"
+      placeholder-the-string-to-encode: A string a ser codificada
+      label-your-text-encoded-to-morse-code: "Seu texto codificado em código Morse:"
+      placeholder-your-string-encoded: Sua string codificada
+      title-decode: Decodificar
+      label-your-morse-encoded-text: "Seu texto codificado em Morse:"
+      placeholder-the-string-to-decode: A string a ser decodificada
+      title-error-while-decoding: Erro ao decodificar
+      label-your-decoded-text: "Seu texto decodificado:"
+      placeholder-your-string-decoded: Sua string decodificada
+
+  list-comparer:
+    title: Listas Comparar
+    description: Comparar dois itens da lista
+    texts:
+      label-trim-items: Itens de acabamento
+      label-ignore-case: Ignorar maiúsculas e minúsculas
+      label-separator: Separador
+      placeholder-additional-separator: Separador adicional
+      label-list-1: Lista 1
+      label-list-2: Lista 2
+      title-items-in-both-lists: Itens em ambas as listas
+      title-items-in-list-1-but-not-in-list-2: Itens na Lista 1, mas não na Lista 2
+      title-items-in-list-2-but-not-in-list-1: Itens na Lista 2, mas não na Lista 1
+
+  smart-text-replacer:
+    title: Substituidor de texto inteligente e quebra de linha
+    description: Pesquise e substitua uma palavra em ocorrências únicas ou
+      múltiplas, assim como a pesquisa e substituição do Bloco de Notas do
+      Windows. Também permite gerenciar quebras de linha e divisão de texto.
+    texts:
+      label-add-linebreak-before: Adicionar quebra de linha antes
+      label-add-linebreak-after: Adicionar quebra de linha após
+      label-add-linebreak-in-place-of: Adicionar quebra de linha no lugar de
+      placeholder-enter-text-here: Digite o texto aqui...
+      label-text-to-search-and-replace: "Texto para pesquisar e substituir:"
+      placeholder-search-regex: Pesquisar regex
+      placeholder-replacement-expression: Expressão de substituição
+      placeholder-split-text-regex: Dividir texto regex
+      label-split-every-characters: "Dividir todos os caracteres:"
+      tag-find-what: "Descubra o que:"
+      tag-replace-with: "Substituir por:"
+      tag-find-next: Encontre o próximo
+      tag-replace: Substituir
+      tag-replace-all: Substituir tudo
+      tag-match-case: Caixa de fósforos
+      tag-keep-linebreaks: Manter quebras de linha
+
+  sensitive-data-masker:
+    title: Mascarador de dados confidenciais
+    description: Limpar dados confidenciais de conteúdo textual (por exemplo, registros)
+    texts:
+      label-your-custom-cleaning-regex-es-case-insensitive: "Sua(s) expressão(ões)
+        regular(ais) de limpeza personalizada(s) (sem distinção entre maiúsculas
+        e minúsculas):"
+      placeholder-your-custom-cleaning-regex-es: Sua(s) expressão(ões) regular(ais) de limpeza personalizada(s)
+      placeholder-no-fallback: Sem fallback
+      input-label-your-log-textual-data: "Seus dados de log/texto:"
+      input-placeholder-paste-your-log-textual-data-here: Cole seus dados de log/texto aqui...
+      output-label-cleaned-version: "Versão limpa:"
+
+  htpasswd-generator:
+    title: Gerador Htpasswd/htaccess
+    description: gerador de usuário/senha htpassword/htaccess
+    texts:
+      label-bcrypt: Bcrypt
+      label-md5: MD5
+      label-apache-md5-apr1: Apache MD5 (abr1)
+      label-sha256: SHA256
+      label-sha512: SHA512
+      label-username: Nome de usuário
+      placeholder-your-username: Seu nome de usuário...
+      label-password: Senha
+      placeholder-your-password: Sua senha...
+      label-hash-method: "Método de hash:"
+      label-salt-rounds: "Rodadas de sal: "
+      placeholder-salt-rounds: Rodadas de sal...
+      label-htpasswd-content: "conteúdo htpasswd:"
+    service:
+      text:
+        unsupported-algorithm: Algoritmo não suportado
+        md5-does-not-currently-support-non-ascii-characters-0: Atualmente, o MD5 não oferece suporte a caracteres não ASCII
+        md5-does-not-currently-support-non-ascii-characters: Atualmente, o MD5 não oferece suporte a caracteres não ASCII
+
+  crc-calculator:
+    title: Calculadora CRC
+    description: Calcular texto ou arquivo CRC (CRC1, CRC8, CRC8 1-Wire, CRC8
+      DVB-S2, CRC16, CRC16 CCITT, CRC16 Modbus, CRC16 Kermit, CRC16 XModem,
+      CRC24, CRC32, CRC32 MPEG-2, CRCJAM)
+    texts:
+      label-binary-base-2: Binário (base 2)
+      label-hexadecimal-base-16: Hexadecimal (base 16)
+      label-base64-base-64: Base64 (base 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 com caracteres seguros para URL)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Arraste e solte um arquivo aqui ou clique para selecionar um arquivo
+      placeholder-paste-string-to-crc: Colar string no CRC...
+      label-your-text-to-crc: "Seu texto para o CRC:"
+      label-digest-encoding: Codificação de resumo
+      tag-or: OU
+      tag-an-error-occured-hashing-file: Ocorreu um erro ao fazer hash do arquivo.
+
+  file-hasher:
+    title: Hasher de arquivos
+    description: Calcular Hash de arquivos
+    texts:
+      label-binary-base-2: Binário (base 2)
+      label-hexadecimal-base-16: Hexadecimal (base 16)
+      label-base64-base-64: Base64 (base 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 com caracteres seguros para URL)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Arraste e solte um arquivo aqui ou clique para selecionar um arquivo
+      label-digest-encoding: Codificação de resumo
+      tag-createblake2b-bits-number-key-idatatype-promise: "createBLAKE2b, // (bits?: número, chave?: IDataType): Promessa"
+      tag-createmd5-promise: "createMD5, // (): Promessa"
+      tag-createripemd160-promise: "createRIPEMD160, // (): Promessa"
+      tag-createsha1-promise: "createSHA1, // (): Promessa"
+      tag-createsha224-promise: "createSHA224, // (): Promessa"
+      tag-createsha256-promise: "createSHA256, // (): Promessa"
+      tag-createsha512-promise: "createSHA512, // (): Promessa"
+      tag-createsm3-promise: "createSM3, // (): Promessa"
+      tag-createwhirlpool-promise: "createWhirlpool, // (): Promessa"
+      tag-createxxhash32-seed-number-promise: "// createXXHash32, //(seed: número): Promessa"
+      tag-createxxhash64-seedlow-number-seedhigh-number-promise: "// createXXHash64, //(seedLow: número, seedHigh: número): Promessa"
+      tag-createxxhash3-seedlow-number-seedhigh-number-promise: "// createXXHash3, //(seedLow: número, seedHigh: número): Promessa"
+      tag-createxxhash128-seedlow-number-seedhigh-number-promise: "// createXXHash128, //(seedLow: número, seedHigh: número): Promessa"
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise:
+        "BLAKE2b: aguarde createBLAKE2b(), // (bits?: número, chave?:
+        IDataType): Promessa"
+      tag-md5-await-createmd5-promise: "MD5: aguarde createMD5(), // (): Promessa"
+      tag-ripemd160-await-createripemd160-promise: "RIPEMD160: aguarde createRIPEMD160(), // (): Promessa"
+      tag-sha1-await-createsha1-promise: "SHA1: aguarde createSHA1(), // (): Promessa"
+      tag-sha224-await-createsha224-promise: "SHA224: aguarde createSHA224(), // (): Promessa"
+      tag-sha256-await-createsha256-promise: "SHA256: aguarde createSHA256(), // (): Promessa"
+      tag-sha512-await-createsha512-promise: "SHA512: aguarde createSHA512(), // (): Promessa"
+      tag-sm3-await-createsm3-promise: "SM3: aguarde createSM3(), // (): Promessa"
+      tag-whirlpool-await-createwhirlpool-promise: "Whirlpool: aguarde createWhirlpool(), // (): Promessa"
+
+  argon2-hash:
+    title: Argon2 Hasher
+    description: Calcular hashes Argon2 com parâmetros
+    texts:
+      label-argon2id: Argon2id
+      label-argon2i: Argon2i
+      label-argon2d: Argon2d
+      label-hex: Hex
+      label-encoded: Codificado
+      label-binary: Binário
+      label-algorithm: "Algoritmo:"
+      label-password: "Senha:"
+      placeholder-enter-password: Digite a senha
+      label-salt-hex: "Sal (hex):"
+      placeholder-optional-hex-salt: Sal hexadecimal opcional
+      label-iterations: "Iterações:"
+      label-memory-kib: "Memória (KiB):"
+      label-parallelism: "Paralelismo:"
+      label-hash-length: "Comprimento do hash:"
+      label-output-type: "Tipo de saída:"
+      title-argon2-hash: Hash de Argon2
+      tag-generate: Gerar
+

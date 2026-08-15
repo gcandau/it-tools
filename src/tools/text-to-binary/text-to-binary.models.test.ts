@@ -29,4 +29,26 @@ describe('text-to-binary', () => {
       expect(() => convertAsciiBinaryToText('1')).toThrow('Invalid binary string');
     });
   });
+
+  describe('non-ASCII text', () => {
+    it('encodes accented characters as UTF-8 octets', () => {
+      expect(convertTextToAsciiBinary('é')).toBe('11000011 10101001');
+    });
+
+    it('encodes characters outside the Basic Multilingual Plane', () => {
+      expect(convertTextToAsciiBinary('😀')).toBe('11110000 10011111 10011000 10000000');
+    });
+
+    it('round-trips text in any script', () => {
+      for (const text of ['héllo', 'Привет', 'こんにちは', '👨‍👩‍👧 family', 'مرحبا']) {
+        expect(convertAsciiBinaryToText(convertTextToAsciiBinary(text))).toBe(text);
+      }
+    });
+
+    it('keeps every group exactly eight bits wide', () => {
+      const groups = convertTextToAsciiBinary('日本語').split(' ');
+
+      expect(groups.every(group => group.length === 8)).toBe(true);
+    });
+  });
 });

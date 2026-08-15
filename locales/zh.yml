@@ -66,10 +66,493 @@ tools:
     images and videos: '图片和视频'
     development: '开发'
     network: '网络'
+    date & time: '日期和时间'
     math: '数学'
     measurement: '测量'
     text: '文本'
     data: '数据'
+
+  json-to-typescript:
+    title: JSON转TypeScript
+    description: 将JSON转换为TypeScript代码
+    texts:
+      message-provided-json-is-not-valid: 提供的JSON无效。
+      title-json-to-typescript: JSON转TypeScript
+      placeholder-put-your-json-string-here: 在此输入JSON字符串...
+      label-json-to-typescript: JSON转TypeScript
+      label-root-name: 根名称
+      title-your-typescript-code: 您的TypeScript代码
+      tag-use-interfaces-only: 仅使用接口
+      tag-transform-property-names-to-javascripty: 将属性名转为JavaScript风格
+      tag-explicitly-name-unions: 显式命名联合类型
+      tag-verify-json-parse-results-at-runtime: 运行时验证JSON.parse结果
+      tag-use-union-type-instead-of-enum: 使用联合类型代替枚举
+      tag-use-types-instead-of-interfaces: 使用类型代替接口
+      tag-use-string-instead-of-enum-for-single-value-enums: 对单值枚举使用字符串代替枚举
+      tag-use-readonly-type-members: 使用只读类型成员
+      tag-make-all-properties-optional: 所有属性可选
+
+  passphrase-generator:
+    title: 密码短语生成器
+    description: 生成随机的可记忆密码短语
+    texts:
+      text-passphrase-s-copied-to-clipboard: 密码短语已复制到剪贴板！
+      label-add-numbers-after-x-words: 在X个单词后添加数字
+      label-max-passphrase-len: 密码短语最大长度
+      label-capitalize: 大写首字母
+      label-separator: 分隔符
+      placeholder-put-separator-char: 输入分隔符字符
+      label-ending-salt-chars: 结尾盐字符
+      placeholder-put-characters-to-appended-to-end-of-passphrase: 输入要附加到密码短语末尾的字符
+      label-number-of-passphrase-to-generate: 要生成的密码短语数量
+      placeholder-passphrase: 密码短语...
+      tag-copy: 复制
+      tag-refresh: 刷新
+      cannot-generate-a-passphrase-of-minlen-value-maxlen-value-characters-please-retry: "# 当前设置无法生成长度为 [{0} - {1}] 个字符的密码短语，请尝试更改单词数限制"
+      words-words: 字数 ({0})
+      label-min-passphrase-len: 最小密码短语长度：
+
+  luhn-validator:
+    title: Luhn验证器
+    description: 检查并生成通过Luhn校验码验证的标识符的密钥
+    texts:
+      label-is-valid: 是否有效？
+      label-luhn-key: Luhn密钥
+      label-value-with-luhn-key: 带Luhn密钥的值
+      placeholder-enter-a-luhn-validated-value: 输入通过Luhn验证的值...
+      label-probably-correct: 可能有效
+      title-infos: 信息
+      tag-invalid-luhn-key: 无效的Luhn密钥。
+
+  sla-calculator:
+    title: 服务级别协议计算器
+    description: 服务级别协议（SLA）计算器
+    texts:
+      message-invalid-duration: 无效的持续时间
+      title-sla-to-downtimes: SLA到停机时间
+      label-agreed-sla: 约定的SLA
+      label-daily-downtime: 每日停机时间
+      label-weekly-downtime: 每周停机时间
+      label-monthly-downtime: 每月停机时间
+      label-quarterly-downtime: 每季度停机时间
+      label-yearly-downtime: 每年停机时间
+      title-downtime-to-sla: 停机时间到SLA
+      label-downtime-duration: 停机时长
+      placeholder-put-downtime-duration-here: 在此输入停机时长...
+      label-daily-sla: 每日SLA
+      label-weekly-sla: 每周SLA
+      label-monthly-sla: 每月SLA
+      label-quarterly-sla: 每季度SLA
+      label-yearly-sla: 每年SLA
+      title-weekdays-hours: 工作日小时
+      label-monday: 周一
+      label-tuesday: 周二
+      label-wednesday: 周三
+      label-thursday: 周四
+      label-friday: 周五
+      label-saturday: 周六
+      label-sunday: 周日
+
+  many-units-converter:
+    title: 多单位转换器
+    description: 转换各种单位
+    texts:
+      label-units-expression: 单位表达式
+      placeholder-please-enter-an-unit-expression-ie-1d-2m: 请输入单位表达式（如'1d 2m'）
+      label-target-unit: 目标单位：
+      placeholder-select-the-target-unit: 选择目标单位
+      title-result: 结果
+      label-best-target-unit: 最佳目标单位
+      label-selected-target-unit-outputunit: 选定目标单元 ({0})
+      title-other-units-conversion-tools: 其他单位转换工具
+
+  duration-calculator:
+    title: 持续时间计算器
+    description: 计算/解析持续时间。
+    texts:
+      label-duration-s: 持续时间（s）
+      placeholder-please-enter-duration-one-per-line-with-optional-sign: 请输入持续时间（每行一个，可选符号）
+      title-total: 总计
+      label-prettified: 美化格式
+      label-prettified-full: 美化格式（完整）
+      label-prettified-colon: 美化格式（冒号分隔）
+      label-prettified-days: 美化格式（天）
+      label-prettified-hours: 美化格式（小时）
+      label-prettified-iso8601: 美化格式（ISO8601）
+      label-milliseconds: 毫秒
+      label-seconds: 秒
+      label-minutes: 分钟
+      label-hours: 小时
+      label-days: 天
+      label-weeks: 周
+      label-years: 年
+      title-lines-errors: 行错误
+      tag-supports-comment-line-hh-mm-ss-fff-3d-1h-3s-p4dt12h20m20-3s: 支持：注释（# 行）、HH:MM:SS.FFF、3d 1h 3s...、P4DT12H20M20.3S..
+
+  timezone-converter:
+    title: 时区转换器
+    description: |
+      将日期时间从一个时区转换为其他时区，并获取时区与国家信息。
+    texts:
+      title-timezones-date-time-converter: 时区日期时间转换器
+      label-timezone: 时区
+      label-date-time-interval-to-convert: 待转换的日期时间区间：
+      label-current-timezone-offset: 当前时区偏移：
+      label-use-24-hour-time-format: 使用24小时制
+      title-date-time-in-other-timezones: 其他时区的日期时间
+      placeholder-please-select-a-timezone: 请选择时区
+      title-country-to-timezones: 国家到时区
+      label-country: 国家
+      title-timezones-to-countries: 时区到国家
+
+  port-numbers:
+    title: 端口号
+    description: 搜索给定端口和协议的分配用途
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      title-port-search: 端口搜索
+      label-port-number: 端口号
+      label-protocol: 协议
+      label-type: 类型
+      label-description: 描述
+
+  url-cleaner:
+    title: URL清理器
+    description: |
+      从URL中清理广告跟踪器、UTM、Facebook及其他广告提供商参数。
+    texts:
+      title-clean-url: 清理URL
+      placeholder-put-your-url-here: 在此输入您的URL...
+      label-url-to-clean: 待清理的URL
+      label-cleaned-url: 清理后的URL
+      placeholder-the-cleaned-url-will-be-here: 清理后的URL将显示在此处
+      tag-is-clean: 已清理
+      tag-was-not-clean: 未清理
+
+  ip-range-to-cidr:
+    title: IPv4/6范围转CIDR计算器
+    description: 根据IP范围（IPv4/6）计算CIDR
+    texts:
+      message-invalid-ipv4-6-address: 无效的IPv4/6地址
+      label-start-address: 起始地址
+      placeholder-start-ipv4-6-address: 起始IPv4/6地址...
+      label-end-address: 结束地址
+      placeholder-end-ipv4-6-address: 结束IPv4/6地址...
+      title-cidr: 跨域路由
+      title-invalid-combination-of-start-and-end-ipv4-6-address: 起始和结束IPv4/6地址组合无效
+      title-invalid-combination-of-ip-version-4-6: IPv4/6版本组合无效
+      tag-switch-start-and-end-ipv4-6-address: 切换起始和结束IPv4/6地址
+      tag-start-ip-and-end-ip-must-be-of-same-version-ipv4-or-ipv6: 起始IP和结束IP必须为同一版本：IPv4或IPv6
+
+  ip-cidr-to-range:
+    title: IPv4/6 CIDR转IP范围计算器
+    description: 根据CIDR（IPv4/6）计算IP范围
+    texts:
+      message-invalid-ipv4-6-cidr: 无效的IPv4/6 CIDR
+      label-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0: IPv4/6 CIDR（如1.0.0.0/23、1.1.1.1/255.255.252.0、1.1.1.1-2.2.2.2或10.0.0.*）
+      placeholder-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR（如1.0.0.0/23 或 1.1.1.1/255.255.252.0 或 1.1.1.1-2.2.2.2 或
+        10.0.0.*）
+      title-resulting-cidr: 结果CIDR
+      label-cidr: 跨域路由
+      title-ipv4-6-range: IPv4/6范围
+      label-start-ip-address: 起始IP地址
+      label-end-ip-address: 结束IP地址
+      label-network-type: 网络类型
+
+  ipv6-subnet-calculator:
+    title: IPv6子网计算器
+    description: 解析IPv6 CIDR块并获取子网络所需的所有信息
+    texts:
+      message-we-cannot-parse-this-address-check-the-format: 我们无法解析此地址，请检查格式
+      label-full-address: 完整地址
+      label-short-address: 短地址
+      label-address-as-binary: 地址（二进制）
+      label-address-as-integer: 地址（整数）
+      label-address-as-decimal: 地址（十进制）
+      label-address-as-hex: 地址（十六进制）
+      label-network-mask-size: 网络掩码大小
+      label-network-mask: 网络掩码
+      label-network-mask-as-integer: 网络掩码（整数）
+      label-network-mask-as-binary: 网络掩码（二进制）
+      label-total-ip-addresses: 总IP地址数
+      label-total-networks: 总网络数
+      label-first-address: 首地址
+      label-last-address: 末地址
+      label-scope: 范围
+      label-6to4-properties: 6to4属性
+      label-teredo-properties: Teredo属性
+      label-arpa: 高级研究计划局
+      label-microsoft-unc-transcription: 微软UNC转录
+      label-type: 类型
+      label-an-ipv6-address-with-or-without-mask: 带或不带掩码的IPv6地址
+      placeholder-the-ipv6-address: IPv6地址...
+
+  markdown-toc-generator:
+    title: Markdown目录生成器
+    description: 从Markdown文件/内容生成目录
+    texts:
+      title-options: 选项
+      label-max-heading-level: 最大标题级别：
+      placeholder-max-heading-level: 最大标题级别...
+      label-bullet-chars: 项目符号字符
+      placeholder-bullet-chars: 项目符号字符
+      label-anchors-prefix: 锚点前缀
+      placeholder-anchors-prefix: 锚点前缀
+      label-indents: "缩进： "
+      placeholder-indents: 缩进...
+      label-comment-styles: 注释样式
+      placeholder-comment-styles: 注释样式
+      title-input-markdown: 输入Markdown
+      placeholder-put-your-markdown-here: 在此输入Markdown...
+      title-output-markdown-with-toc: 输出带目录的Markdown
+      tag-generate-anchors: 生成锚点
+      tag-advanced: 高级
+      tag-concat-spaces: 合并空格
+      tag-you-can-paste-a-document-with-existing-toc-generated-by-this-tool-or-add-a: 您可以粘贴包含此工具生成的现有目录的文档，或在文档中添加一个
+      tag-marker-in-your-document-on-a-single-line: 单行标记
+
+  html-cleaner:
+    title: HTML清理器
+    description: 清理HTML
+    texts:
+      placeholder-your-html-content: 您的HTML内容...
+      label-your-html-to-clean-can-paste-from-clipboard: 您的HTML待清理内容（可从剪贴板粘贴）：
+      label-output-cleaned-html: 输出清理后的HTML：
+
+  json-sort-master:
+    title: JSON排序大师
+    description: 按键和值对JSON进行排序。
+    texts:
+      message-provided-json-is-not-valid: 提供的JSON无效。
+      label-key-name: 键名：
+      label-key-value: 键值
+      label-key-name-descending: 键名（降序）
+      label-key-value-descending: 键值（降序）
+      label-sort-method: 排序方式
+      label-your-raw-json: 原始JSON
+      placeholder-paste-your-raw-json-here: 在此粘贴原始JSON...
+      label-sorted-version-of-your-json: 排序后的JSON版本
+
+  json-escaper:
+    title: JSON转义器/反转义器
+    description: 转义和反转义JSON字符串
+    texts:
+      title-escape-json-string: 转义JSON字符串
+      placeholder-put-your-string-to-escape: 在此输入要转义的字符串...
+      label-string-to-escape: 要转义的字符串
+      label-escaped-string: 转义后的字符串
+      title-unescape-json-string: 反转义JSON字符串
+      placeholder-put-your-string-to-unescape: 在此输入要反转义的字符串...
+      label-string-to-unescape: 要反转义的字符串
+      label-unescaped-string: 反转义后的字符串
+      label-wrap-in-quotes: 用引号括起来
+
+  json-to-schema:
+    title: JSON转模式
+    description: 将JSON数据转换为JSON模式、MySQL DDL、Mongoose模式、Google BigQuery模式或ClickHouse表模式
+    texts:
+      label-generic: 通用
+      label-json-schema: JSON模式
+      label-mysql-table-schema: MySQL表模式
+      label-mongoose-schema: Mongoose模式
+      label-google-bigquery-schema: Google BigQuery模式
+      label-clickhouse-table-schema: ClickHouse表模式
+      message-provided-json-is-not-valid: 提供的JSON无效。
+      placeholder-target-schema-format: 目标模式格式
+      label-table-name: 表名
+      placeholder-table-name: 表名
+      input-label-your-json: 您的JSON
+      input-placeholder-paste-your-json-here: 在此粘贴JSON...
+      output-label-your-schema: 您的模式
+
+  html-to-markdown:
+    title: HTML转Markdown
+    description: 将HTML（可从剪贴板）转换为Markdown
+    texts:
+      placeholder-your-html-content: 您的HTML内容...
+      label-your-html-to-convert-can-paste-from-clipboard: 您的HTML待转换内容（可从剪贴板粘贴）：
+      label-output-markdown: 输出Markdown：
+      label-heading-style: 标题样式：
+      label-emphasis-style: 强调风格：
+      label-hash: 哈希（#）
+      label-underline: 下划线（=/-）
+      label-surround-heading: 环绕（= 标题 =）
+      label-asterisk: 星号 (*)
+      label-underscore: 下划线 (_)
+      label-tilde: 波浪号 (~)
+
+  punycode-converter:
+    title: Punycode转换器
+    description: 在国际Unicode域名/邮件与ASCII Punycode版本之间转换
+    texts:
+      title-punycode-to-international: Punycode转国际
+      placeholder-put-your-punycode-domain-name-or-email-to-decode: 在此输入要解码的Punycode域名或邮件...
+      label-punycode-domain-name-email: Punycode域名/邮件
+      label-decoded-domain-name-email: 解码后的域名/邮件
+      title-international-to-punycode: 国际转Punycode
+      placeholder-put-your-international-domain-or-email-name-here: 在此输入要编码的国际域名或邮件名称...
+      label-domain-name-or-email-to-encode: 要编码的域名或邮件
+
+  morse-converter:
+    title: 摩尔斯电码转换器
+    description: 编码/解码为摩尔斯电码
+    texts:
+      title-encode: 编码
+      label-your-text: 您的文本：
+      placeholder-the-string-to-encode: 要编码的字符串
+      label-your-text-encoded-to-morse-code: 您的文本编码为摩尔斯电码：
+      placeholder-your-string-encoded: 您的字符串编码
+      title-decode: 解码
+      label-your-morse-encoded-text: 您的摩尔斯编码文本：
+      placeholder-the-string-to-decode: 要解码的字符串
+      title-error-while-decoding: 解码时出错
+      label-your-decoded-text: 您的解码文本：
+      placeholder-your-string-decoded: 您的字符串解码
+
+  list-comparer:
+    title: 列表比较器
+    description: 比较两个列表项
+    texts:
+      label-trim-items: 修剪项
+      label-ignore-case: 忽略大小写
+      label-separator: 分隔符
+      placeholder-additional-separator: 额外分隔符
+      label-list-1: 列表1
+      label-list-2: 列表2
+      title-items-in-both-lists: 两个列表共有的项
+      title-items-in-list-1-but-not-in-list-2: 列表1独有的项
+      title-items-in-list-2-but-not-in-list-1: 列表2独有的项
+
+  smart-text-replacer:
+    title: 智能文本替换器与换行器
+    description: |
+      像Windows记事本一样搜索并替换单词（支持单次或多次出现）。还支持管理换行和文本分割。
+    texts:
+      label-add-linebreak-before: 在...前添加换行
+      label-add-linebreak-after: 在...后添加换行
+      label-add-linebreak-in-place-of: 用换行替换...
+      placeholder-enter-text-here: 在此输入文本...
+      label-text-to-search-and-replace: 待搜索替换的文本：
+      placeholder-search-regex: 搜索正则表达式
+      placeholder-replacement-expression: 替换表达式
+      placeholder-split-text-regex: 分割文本正则表达式
+      label-split-every-characters: 每...个字符分割：
+      tag-find-what: 查找内容：
+      tag-replace-with: 替换为：
+      tag-find-next: 查找下一个
+      tag-replace: 替换
+      tag-replace-all: 全部替换
+      tag-match-case: 匹配大小写
+      tag-keep-linebreaks: 保留换行
+
+  sensitive-data-masker:
+    title: 敏感数据掩码器
+    description: 清理文本内容中的敏感数据（如日志）
+    texts:
+      label-your-custom-cleaning-regex-es-case-insensitive: 您的自定义清理正则表达式（不区分大小写）：
+      placeholder-your-custom-cleaning-regex-es: 您的自定义清理正则表达式
+      placeholder-no-fallback: 无备用
+      input-label-your-log-textual-data: 您的日志/文本内容：
+      input-placeholder-paste-your-log-textual-data-here: 在此粘贴日志/文本内容...
+      output-label-cleaned-version: 清理后版本：
+
+  htpasswd-generator:
+    title: Htpasswd/htaccess生成器
+    description: htpassword/htaccess用户/密码生成器
+    texts:
+      label-bcrypt: 加密
+      label-md5: MD5
+      label-apache-md5-apr1: Apache MD5（apr1）
+      label-sha256: SHA256
+      label-sha512: SHA512
+      label-username: 用户名
+      placeholder-your-username: 您的用户名...
+      label-password: 密码
+      placeholder-your-password: 您的密码...
+      label-hash-method: 哈希方法：
+      label-salt-rounds: 盐轮数：
+      placeholder-salt-rounds: 盐轮数...
+      label-htpasswd-content: htpasswd内容：
+    service:
+      text:
+        unsupported-algorithm: 不支持的算法
+        md5-does-not-currently-support-non-ascii-characters-0: MD5当前不支持非ASCII字符
+        md5-does-not-currently-support-non-ascii-characters: MD5当前不支持非ASCII字符
+
+  crc-calculator:
+    title: CRC计算器
+    description: >
+      计算文本或文件的CRC（CRC1、CRC8、CRC8 1-Wire、CRC8 DVB-S2、CRC16、CRC16 CCITT、CRC16
+      Modbus、CRC16 Kermit、CRC16 XModem、CRC24、CRC32、CRC32 MPEG-2、CRCJAM）。
+    texts:
+      label-binary-base-2: 二进制（base 2）
+      label-hexadecimal-base-16: 十六进制（base 16）
+      label-base64-base-64: Base64（base 64）
+      label-base64url-base-64-with-url-safe-chars: Base64url（带URL安全字符的base 64）
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: 拖放文件至此或点击选择文件
+      placeholder-paste-string-to-crc: 粘贴要计算CRC的字符串...
+      label-your-text-to-crc: 要计算CRC的文本：
+      label-digest-encoding: 摘要编码
+      tag-or: 或
+      tag-an-error-occured-hashing-file: 计算文件哈希时发生错误。
+
+  file-hasher:
+    title: 文件哈希器
+    description: 计算文件的哈希值。
+    texts:
+      label-binary-base-2: 二进制（base 2）
+      label-hexadecimal-base-16: 十六进制（base 16）
+      label-base64-base-64: Base64（base 64）
+      label-base64url-base-64-with-url-safe-chars: Base64url（带URL安全字符的base 64）
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: 拖放文件至此或点击选择文件
+      label-digest-encoding: 摘要编码
+      tag-createblake2b-bits-number-key-idatatype-promise: createBLAKE2b，//（位？：数字，键？：IDataType）：承诺
+      tag-createmd5-promise: createMD5，//（）：承诺
+      tag-createripemd160-promise: createRIPEMD160，//（）：承诺
+      tag-createsha1-promise: createSHA1，//（）：承诺
+      tag-createsha224-promise: createSHA224，//（）：承诺
+      tag-createsha256-promise: createSHA256，//（）：承诺
+      tag-createsha512-promise: createSHA512，//（）：承诺
+      tag-createsm3-promise: createSM3，//（）：承诺
+      tag-createwhirlpool-promise: createWhirlpool，//（）：承诺
+      tag-createxxhash32-seed-number-promise: "// createXXHash32, //(种子: 数字): 承诺"
+      tag-createxxhash64-seedlow-number-seedhigh-number-promise: // createXXHash64，//（seedLow：数字，seedHigh：数字）：承诺
+      tag-createxxhash3-seedlow-number-seedhigh-number-promise: // createXXHash3，//（seedLow：数字，seedHigh：数字）：承诺
+      tag-createxxhash128-seedlow-number-seedhigh-number-promise: "// createXXHash128, //(seedLow: number, seedHigh: number): Promise"
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise: BLAKE2b：等待 createBLAKE2b()，//（位？：数字，键？：IDataType）：承诺
+      tag-md5-await-createmd5-promise: MD5：等待 createMD5()，//()：承诺
+      tag-ripemd160-await-createripemd160-promise: RIPEMD160：等待 createRIPEMD160()，//（）：承诺
+      tag-sha1-await-createsha1-promise: SHA1：等待 createSHA1()，//（）：承诺
+      tag-sha224-await-createsha224-promise: SHA224：等待 createSHA224()，//（）：承诺
+      tag-sha256-await-createsha256-promise: SHA256：等待 createSHA256()，//（）：承诺
+      tag-sha512-await-createsha512-promise: SHA512：等待 createSHA512()，//（）：承诺
+      tag-sm3-await-createsm3-promise: SM3：等待 createSM3()，//()：承诺
+      tag-whirlpool-await-createwhirlpool-promise: Whirlpool：等待 createWhirlpool()，//()：承诺
+
+  argon2-hash:
+    title: Argon2 哈希尔
+    description: 使用参数计算 Argon2 哈希值
+    texts:
+      label-argon2id: Argon2id
+      label-argon2i: Argon2i
+      label-argon2d: Argon2d
+      label-hex: 十六进制
+      label-encoded: 编码
+      label-binary: 二进制
+      label-algorithm: 算法：
+      label-password: 密码：
+      placeholder-enter-password: 输入密码
+      label-salt-hex: 盐（十六进制）：
+      placeholder-optional-hex-salt: 可选的六方盐
+      label-iterations: 迭代次数：
+      label-memory-kib: 内存（KiB）：
+      label-parallelism: 平行结构：
+      label-hash-length: 哈希长度：
+      label-output-type: 输出类型：
+      title-argon2-hash: Argon2 哈希
+      tag-generate: 产生
 
   password-strength-analyser:
     title: 密码强度分析仪

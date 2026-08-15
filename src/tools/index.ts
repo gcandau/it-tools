@@ -1,3 +1,32 @@
+import { tool as argon2Hash } from './argon2-hash';
+import { tool as crcCalculator } from './crc-calculator';
+import { tool as durationCalculator } from './duration-calculator';
+import { tool as fileHasher } from './file-hasher';
+import { tool as htmlCleaner } from './html-cleaner';
+import { tool as htmlToMarkdown } from './html-to-markdown';
+import { tool as htpasswdGenerator } from './htpasswd-generator';
+import { tool as ipCidrToRange } from './ip-cidr-to-range';
+import { tool as ipRangeToCidr } from './ip-range-to-cidr';
+import { tool as ipv6SubnetCalculator } from './ipv6-subnet-calculator';
+import { tool as jsonEscaper } from './json-escaper';
+import { tool as jsonSortMaster } from './json-sort-master';
+import { tool as jsonToSchema } from './json-to-schema';
+import { tool as jsonToTypescript } from './json-to-typescript';
+import { tool as listComparer } from './list-comparer';
+import { tool as luhnValidator } from './luhn-validator';
+import { tool as manyUnitsConverter } from './many-units-converter';
+import { tool as markdownTocGenerator } from './markdown-toc-generator';
+import { tool as morseConverter } from './morse-converter';
+import { tool as passphraseGenerator } from './passphrase-generator';
+import { tool as portNumbers } from './port-numbers';
+import { tool as punycodeConverter } from './punycode-converter';
+import { tool as sensitiveDataMasker } from './sensitive-data-masker';
+import { tool as slaCalculator } from './sla-calculator';
+import { tool as smartTextReplacer } from './smart-text-replacer';
+import { tool as timezoneConverter } from './timezone-converter';
+import { tool as urlCleaner } from './url-cleaner';
+import { tool as aiTextDetector } from './ai-text-detector';
+import { tool as aiWatermarkRemover } from './ai-watermark-remover';
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
@@ -90,12 +119,16 @@ import { tool as yamlViewer } from './yaml-viewer';
 
 export const toolsByCategory: ToolCategory[] = [
   {
+    name: 'AI',
+    components: [aiWatermarkRemover, aiTextDetector],
+  },
+  {
     name: 'Crypto',
-    components: [tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser, pdfSignatureChecker],
+    components: [argon2Hash, crcCalculator, fileHasher, htpasswdGenerator, passphraseGenerator, tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser, pdfSignatureChecker],
   },
   {
     name: 'Converter',
-    components: [
+    components: [htmlToMarkdown, jsonEscaper, jsonToSchema, jsonToTypescript, morseConverter, punycodeConverter,
       dateTimeConverter,
       baseConverter,
       romanNumeralConverter,
@@ -145,7 +178,7 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Development',
-    components: [
+    components: [htmlCleaner, jsonSortMaster, markdownTocGenerator,
       gitMemo,
       randomPortGenerator,
       crontabGenerator,
@@ -164,7 +197,11 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Network',
-    components: [ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, macAddressGenerator, ipv6UlaGenerator],
+    components: [ipCidrToRange, ipRangeToCidr, ipv6SubnetCalculator, portNumbers, urlCleaner, ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, macAddressGenerator, ipv6UlaGenerator],
+  },
+  {
+    name: 'Date & time',
+    components: [durationCalculator, timezoneConverter],
   },
   {
     name: 'Math',
@@ -172,11 +209,11 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Measurement',
-    components: [chronometer, temperatureConverter, benchmarkBuilder],
+    components: [manyUnitsConverter, slaCalculator, chronometer, temperatureConverter, benchmarkBuilder],
   },
   {
     name: 'Text',
-    components: [
+    components: [listComparer, sensitiveDataMasker, smartTextReplacer,
       loremIpsumGenerator,
       textStatistics,
       emojiPicker,
@@ -188,7 +225,7 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Data',
-    components: [phoneParserAndFormatter, ibanValidatorAndParser],
+    components: [luhnValidator, phoneParserAndFormatter, ibanValidatorAndParser],
   },
 ];
 

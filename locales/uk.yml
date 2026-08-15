@@ -66,7 +66,509 @@ tools:
     images and videos: 'Зображення та відео'
     development: Розробка
     network: Мережа
+    date & time: 'Дата та час'
     math: Математика
     measurement: Вимірювання
     text: Текст
     data: Дані
+  json-to-typescript:
+    title: Json у Typescript
+    description: Конвертувати JSON у код Typescript
+    texts:
+      message-provided-json-is-not-valid: Наданий JSON недійсний.
+      title-json-to-typescript: JSON у Typescript
+      placeholder-put-your-json-string-here: Вставте сюди свій JSON-рядок...
+      label-json-to-typescript: JSON у Typescript
+      label-root-name: Кореневе ім&#39;я
+      title-your-typescript-code: Ваш код Typescript
+      tag-use-interfaces-only: Використовувати лише інтерфейси
+      tag-transform-property-names-to-javascripty: Перетворення назв властивостей у JavaScript
+      tag-explicitly-name-unions: Явно називайте союзи
+      tag-verify-json-parse-results-at-runtime: Перевіряти результати JSON.parse під час виконання
+      tag-use-union-type-instead-of-enum: Використовуйте тип Union замість Enum
+      tag-use-types-instead-of-interfaces: Використовуйте типи замість інтерфейсів
+      tag-use-string-instead-of-enum-for-single-value-enums: Використовуйте рядок замість переліку для переліків з одним значенням
+      tag-use-readonly-type-members: Використовувати члени типу &quot;тільки для читання&quot;
+      tag-make-all-properties-optional: Зробити всі властивості необов&#39;язковими
+
+  passphrase-generator:
+    title: Генератор паролів
+    description: Генеруйте випадкові запам'ятовувані паролі
+    texts:
+      text-passphrase-s-copied-to-clipboard: Пароль(и) скопійовано в буфер обміну!
+      label-add-numbers-after-x-words: Додайте числа після X слів
+      label-max-passphrase-len: Максимальна довжина парольної фрази
+      label-capitalize: З великої літери
+      label-separator: Роздільник
+      placeholder-put-separator-char: Вставте роздільник символів
+      label-ending-salt-chars: Кінцеві соляні символи
+      placeholder-put-characters-to-appended-to-end-of-passphrase: Додати символи в кінець парольної фрази
+      label-number-of-passphrase-to-generate: Кількість парольних фраз для генерації
+      placeholder-passphrase: Пароль...
+      tag-copy: Копіювати
+      tag-refresh: Оновити
+      cannot-generate-a-passphrase-of-minlen-value-maxlen-value-characters-please-retry:
+        "# Не вдається згенерувати парольну фразу з [{0} - {1}] символів з
+        поточними налаштуваннями, спробуйте змінити кількість слів"
+      words-words: Слова ({0})
+      label-min-passphrase-len: "Мінімальна довжина парольної фрази:"
+
+  luhn-validator:
+    title: Валідатор Luhn
+    description: Перевіряйте та генеруйте ключі для ідентифікаторів, що
+      перевіряються алгоритмом Luhn
+    texts:
+      label-is-valid: Чи дійсний?
+      label-luhn-key: Лун-Кі
+      label-value-with-luhn-key: Значення з ключем Луна
+      placeholder-enter-a-luhn-validated-value: Введіть значення, підтверджене методом Луна...
+      label-probably-correct: Ймовірно, правильно
+      title-infos: Інформація
+      tag-invalid-luhn-key: Недійсний ключ Луна.
+
+  sla-calculator:
+    title: Калькулятор SLA
+    description: Калькулятор угоди про рівень обслуговування (Service Level Agreement)
+    texts:
+      message-invalid-duration: Недійсна тривалість
+      title-sla-to-downtimes: SLA щодо простоїв
+      label-agreed-sla: Узгоджена угода про рівень обслуговування
+      label-daily-downtime: Щоденний час простою
+      label-weekly-downtime: Щотижневий простій
+      label-monthly-downtime: Щомісячний простой
+      label-quarterly-downtime: Щоквартальний простій
+      label-yearly-downtime: Щорічний простой
+      title-downtime-to-sla: Простой через дотримання SLA
+      label-downtime-duration: Тривалість простою
+      placeholder-put-downtime-duration-here: Вкажіть тут тривалість простою...
+      label-daily-sla: Щоденний SLA
+      label-weekly-sla: Щотижневий SLA
+      label-monthly-sla: Щомісячний SLA
+      label-quarterly-sla: Щоквартальний SLA
+      label-yearly-sla: Річна угода про рівень обслуговування (SLA)
+      title-weekdays-hours: Години роботи у будні дні
+      label-monday: Понеділок
+      label-tuesday: Вівторок
+      label-wednesday: Середа
+      label-thursday: Четвер
+      label-friday: П&#39;ятниця
+      label-saturday: Субота
+      label-sunday: Неділя
+
+  many-units-converter:
+    title: Конвертер багатьох одиниць
+    description: Конвертуйте всі види одиниць
+    texts:
+      label-units-expression: Вираз одиниць
+      placeholder-please-enter-an-unit-expression-ie-1d-2m: Будь ласка, введіть вираз одиниці вимірювання, наприклад, «1d 2m»
+      label-target-unit: "Цільовий підрозділ:"
+      placeholder-select-the-target-unit: Виберіть цільовий блок
+      title-result: Результат
+      label-best-target-unit: Найкращий цільовий підрозділ
+      label-selected-target-unit-outputunit: Вибраний цільовий блок ({0})
+      title-other-units-conversion-tools: Інші інструменти для перетворення одиниць вимірювання
+
+  duration-calculator:
+    title: Калькулятор тривалості
+    description: Обчислюйте/розбирайте тривалості
+    texts:
+      label-duration-s: Тривалість(и)
+      placeholder-please-enter-duration-one-per-line-with-optional-sign:
+        Будь ласка, введіть тривалість, по одній на рядок із необов&#39;язковим
+        знаком
+      title-total: Всього
+      label-prettified: Прикрашений
+      label-prettified-full: Преттифікований (повний)
+      label-prettified-colon: Преттифікований (двокрапка)
+      label-prettified-days: Прикрашений (дні)
+      label-prettified-hours: Преттифіковано (годин)
+      label-prettified-iso8601: Претифікований (ISO8601)
+      label-milliseconds: Мілісекунди
+      label-seconds: Секунди
+      label-minutes: Хвилини
+      label-hours: Години
+      label-days: Дні
+      label-weeks: Тижні
+      label-years: Роки
+      title-lines-errors: Помилки ліній
+      tag-supports-comment-line-hh-mm-ss-fff-3d-1h-3s-p4dt12h20m20-3s:
+        "Підтримує: коментар (рядок #), HH:MM:SS.FFF, 3d 1h 3s...,
+        P4DT12H20M20.3S.."
+
+  timezone-converter:
+    title: Конвертер часових поясів
+    description: Конвертуйте дату-час з одного часового поясу в інші та отримуйте
+      інформацію про часові пояси та країни
+    texts:
+      title-timezones-date-time-converter: Конвертер дати та часу часових поясів
+      label-timezone: Часовий пояс
+      label-date-time-interval-to-convert: "Інтервал дати/часу для конвертації:"
+      label-current-timezone-offset: "Поточний зсув часового поясу:"
+      label-use-24-hour-time-format: Використовуйте 24-годинний формат часу
+      title-date-time-in-other-timezones: Дата-час в інших часових поясах
+      placeholder-please-select-a-timezone: Будь ласка, виберіть часовий пояс
+      title-country-to-timezones: Країна за часовими поясами
+      label-country: Країна
+      title-timezones-to-countries: Часові пояси за країнами
+
+  port-numbers:
+    title: Номери портів
+    description: Шукайте призначене використання для заданого порту та протоколу
+    texts:
+      label-tcp: ТСР
+      label-udp: Уніфікований діловий процес (UDP)
+      title-port-search: Пошук порту
+      label-port-number: Номер порту
+      label-protocol: Протокол
+      label-type: Тип
+      label-description: Опис
+
+  url-cleaner:
+    title: Очищувач URL
+    description: Очищуйте URL від трекерів реклами, UTM, Facebook та інших
+      параметрів провайдерів реклами
+    texts:
+      title-clean-url: Очистити URL-адресу
+      placeholder-put-your-url-here: Вставте тут свою URL-адресу...
+      label-url-to-clean: URL-адреса для очищення
+      label-cleaned-url: Очищена URL-адреса
+      placeholder-the-cleaned-url-will-be-here: Очищена URL-адреса буде тут
+      tag-is-clean: Чистий
+      tag-was-not-clean: Не було чисто.
+
+  ip-range-to-cidr:
+    title: Діапазон IPv4/6 у CIDR
+    description: Обчислюйте CIDR з діапазону IP (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-address: Недійсна адреса IPv4/6
+      label-start-address: Початкова адреса
+      placeholder-start-ipv4-6-address: Початкова адреса IPv4/6...
+      label-end-address: Кінцева адреса
+      placeholder-end-ipv4-6-address: Кінець IPv4/6-адреси...
+      title-cidr: CIDR
+      title-invalid-combination-of-start-and-end-ipv4-6-address: Недійсна комбінація початкової та кінцевої IPv4/6 адреси
+      title-invalid-combination-of-ip-version-4-6: Недійсна комбінація IP-адрес версії 4/6
+      tag-switch-start-and-end-ipv4-6-address: Перемикання початкової та кінцевої адреси IPv4/6
+      tag-start-ip-and-end-ip-must-be-of-same-version-ipv4-or-ipv6:
+        "Початкова та кінцева IP-адреси повинні бути однієї версії: IPv4 або
+        IPv6"
+
+  ip-cidr-to-range:
+    title: CIDR IPv4/6 у діапазон IP
+    description: Обчислюйте діапазон IP з CIDR (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-cidr: Недійсний CIDR ipv4/6
+      label-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (тобто 1.0.0.0/23 або 1.1.1.1/255.255.252.0 або
+        1.1.1.1-2.2.2.2 або 10.0.0.*)
+      placeholder-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (тобто 1.0.0.0/23 або 1.1.1.1/255.255.252.0 або
+        1.1.1.1-2.2.2.2 або 10.0.0.*)
+      title-resulting-cidr: Результуючий CIDR
+      label-cidr: CIDR
+      title-ipv4-6-range: Діапазон IPv4/6
+      label-start-ip-address: Початкова IP-адреса
+      label-end-ip-address: Кінцева IP-адреса
+      label-network-type: Тип мережі
+
+  ipv6-subnet-calculator:
+    title: Калькулятор підмереж IPv6
+    description: Парсинг ваших блоків CIDR IPv6 та отримання всієї необхідної
+      інформації про вашу підмережу
+    texts:
+      message-we-cannot-parse-this-address-check-the-format: Ми не можемо проаналізувати цю адресу, перевірте формат
+      label-full-address: Повна адреса
+      label-short-address: Коротка адреса
+      label-address-as-binary: Адреса у двійковому форматі
+      label-address-as-integer: Адреса як ціле число
+      label-address-as-decimal: Адреса у десятковому форматі
+      label-address-as-hex: Адреса у шістнадцятковому форматі
+      label-network-mask-size: Розмір маски мережі
+      label-network-mask: Маска мережі
+      label-network-mask-as-integer: Маска мережі як ціле число
+      label-network-mask-as-binary: Мережева маска у двійковому форматі
+      label-total-ip-addresses: Загальна кількість IP-адрес
+      label-total-networks: Всього мереж
+      label-first-address: Перша адреса
+      label-last-address: Остання адреса
+      label-scope: Сфера застосування
+      label-6to4-properties: 6to4 Властивості
+      label-teredo-properties: Пропертісіонс Тередо
+      label-arpa: ARPA
+      label-microsoft-unc-transcription: Транскрипція Microsoft UNC
+      label-type: Тип
+      label-an-ipv6-address-with-or-without-mask: IPv6-адреса з маскою або без неї
+      placeholder-the-ipv6-address: Адреса ipv6...
+
+  markdown-toc-generator:
+    title: Генератор змісту Markdown
+    description: Генеруйте зміст із файлу/контенту Markdown
+    texts:
+      title-options: Опції
+      label-max-heading-level: "Максимальний рівень заголовка:"
+      placeholder-max-heading-level: Максимальний рівень заголовка...
+      label-bullet-chars: Символи кулі
+      placeholder-bullet-chars: Символи кулі
+      label-anchors-prefix: Префікс якорів
+      placeholder-anchors-prefix: Префікс якорів
+      label-indents: "Відступи: "
+      placeholder-indents: Відступи...
+      label-comment-styles: Стилі коментарів
+      placeholder-comment-styles: Стилі коментарів
+      title-input-markdown: Вхідна розцінка
+      placeholder-put-your-markdown-here: Вкажіть свою цінову пропозицію тут...
+      title-output-markdown-with-toc: Вихідна уцінка зі змістом
+      tag-generate-anchors: Генерувати якорі
+      tag-advanced: Розширений
+      tag-concat-spaces: Конкатні простори
+      tag-you-can-paste-a-document-with-existing-toc-generated-by-this-tool-or-add-a:
+        Ви можете вставити документ з існуючим змістом (згенерованим цим
+        інструментом) або додати
+      tag-marker-in-your-document-on-a-single-line: маркер у вашому документі (на одному рядку)
+
+  html-cleaner:
+    title: Очищувач HTML
+    description: Очищуйте HTML
+    texts:
+      placeholder-your-html-content: Ваш HTML-контент...
+      label-your-html-to-clean-can-paste-from-clipboard: "Ваш HTML-код для очищення (можна вставити з буфера обміну):"
+      label-output-cleaned-html: "Вивести очищений HTML:"
+
+  json-sort-master:
+    title: Майстер сортування JSON
+    description: Сортуйте ваш JSON за ключами та значеннями.
+    texts:
+      message-provided-json-is-not-valid: Наданий JSON недійсний.
+      label-key-name: "Назва ключа:"
+      label-key-value: Ключове значення
+      label-key-name-descending: Назва ключа (за спаданням)
+      label-key-value-descending: Ключове значення (за спаданням)
+      label-sort-method: Метод сортування
+      label-your-raw-json: Ваш необроблений JSON
+      placeholder-paste-your-raw-json-here: Вставте сюди свій необроблений JSON...
+      label-sorted-version-of-your-json: Відсортована версія вашого JSON
+
+  json-escaper:
+    title: Екранування/Розекранування JSON
+    description: Екрануйте та розекрануйте JSON рядки
+    texts:
+      title-escape-json-string: Екранний рядок JSON
+      placeholder-put-your-string-to-escape: Поклади свою нитку, щоб втекти...
+      label-string-to-escape: Рядок для екранування
+      label-escaped-string: Екранований рядок
+      title-unescape-json-string: Змінити екранований рядок JSON
+      placeholder-put-your-string-to-unescape: Встав свою струну, щоб розблокувати...
+      label-string-to-unescape: Рядок для скасування екранування
+      label-unescaped-string: Неескейпований рядок
+      label-wrap-in-quotes: Загорніть у лапки
+
+  json-to-schema:
+    title: JSON у схему
+    description: Конвертуйте JSON дані у JSON Schema, MySQL DDL, Mongoose Schema,
+      Google BigQuery Schema або ClickHouse Table Schema
+    texts:
+      label-generic: Загальний
+      label-json-schema: Схема JSON
+      label-mysql-table-schema: Схема таблиці MySQL
+      label-mongoose-schema: Схема мангуста
+      label-google-bigquery-schema: Схема Google BigQuery
+      label-clickhouse-table-schema: Схема таблиці ClickHouse
+      message-provided-json-is-not-valid: Наданий JSON недійсний.
+      placeholder-target-schema-format: Формат цільової схеми
+      label-table-name: Назва таблиці
+      placeholder-table-name: Назва таблиці
+      input-label-your-json: Ваш JSON
+      input-placeholder-paste-your-json-here: Вставте сюди свій JSON...
+      output-label-your-schema: Ваша схема
+
+  html-to-markdown:
+    title: HTML у Markdown
+    description: Конвертуйте HTML (наприклад, зі вставки з буфера обміну) у Markdown
+    texts:
+      placeholder-your-html-content: Ваш HTML-контент...
+      label-your-html-to-convert-can-paste-from-clipboard: "Ваш HTML-код для конвертації (можна вставити з буфера обміну):"
+      label-output-markdown: "Вихідна уцінка:"
+      label-heading-style: "Стиль заголовків:"
+      label-emphasis-style: "Стиль акценту:"
+      label-hash: Хеш (#)
+      label-underline: Підкреслення (=/-)
+      label-surround-heading: Оточуючий (= Заголовок =)
+      label-asterisk: Зірочка (*)
+      label-underscore: Підкреслення (_)
+      label-tilde: Тильда (~)
+
+  punycode-converter:
+    title: Конвертер Punycode
+    description: Конвертувати міжнародні доменні імена або електронні адреси Unicode
+      з/у версію ASCII Punycode
+    texts:
+      title-punycode-to-international: З Пунікоду до міжнародного
+      placeholder-put-your-punycode-domain-name-or-email-to-decode:
+        Введіть своє доменне ім&#39;я або електронну адресу в punycode для
+        розшифровки...
+      label-punycode-domain-name-email: Доменне ім&#39;я/електронна пошта Punycode
+      label-decoded-domain-name-email: Розшифроване доменне ім&#39;я/електронна адреса
+      title-international-to-punycode: Міжнародний до Пунікоду
+      placeholder-put-your-international-domain-or-email-name-here: Введіть тут свій міжнародний домен або ім&#39;я електронної пошти...
+      label-domain-name-or-email-to-encode: Доменне ім&#39;я або електронна адреса для кодування
+
+  morse-converter:
+    title: Конвертер коду Морзе
+    description: Кодуйте/Декодуйте у код Морзе
+    texts:
+      title-encode: Кодувати
+      label-your-text: "Ваш текст:"
+      placeholder-the-string-to-encode: Рядок для кодування
+      label-your-text-encoded-to-morse-code: "Ваш текст, закодований азбукою Морзе:"
+      placeholder-your-string-encoded: Ваш рядок закодовано
+      title-decode: Розшифрувати
+      label-your-morse-encoded-text: "Ваш текст, закодований за Морзе:"
+      placeholder-the-string-to-decode: Рядок для декодування
+      title-error-while-decoding: Помилка під час декодування
+      label-your-decoded-text: "Ваш розшифрований текст:"
+      placeholder-your-string-decoded: Ваш рядок розшифровано
+
+  list-comparer:
+    title: Порівнювач списків
+    description: Порівнюйте елементи двох списків
+    texts:
+      label-trim-items: Обрізати елементи
+      label-ignore-case: Ігнорувати регістр
+      label-separator: Роздільник
+      placeholder-additional-separator: Додатковий роздільник
+      label-list-1: Список 1
+      label-list-2: Список 2
+      title-items-in-both-lists: Елементи в обох списках
+      title-items-in-list-1-but-not-in-list-2: Елементи зі Списку 1, але не зі Списку 2
+      title-items-in-list-2-but-not-in-list-1: Елементи зі Списку 2, але не зі Списку 1
+
+  smart-text-replacer:
+    title: Розумний замінник тексту
+    description: Шукайте та замінюйте слова в одному або кількох випадках, як у
+      блокноті Windows. Також дозволяє керувати розривами рядків та розбиттям
+      тексту
+    texts:
+      label-add-linebreak-before: Додати розрив рядка перед
+      label-add-linebreak-after: Додати розрив рядка після
+      label-add-linebreak-in-place-of: Додати розрив рядка замість
+      placeholder-enter-text-here: Введіть текст тут...
+      label-text-to-search-and-replace: "Текст для пошуку та заміни:"
+      placeholder-search-regex: Пошук регулярного виразу
+      placeholder-replacement-expression: Вираз заміни
+      placeholder-split-text-regex: Регулярний вираз розділеного тексту
+      label-split-every-characters: "Розділити всі символи:"
+      tag-find-what: "Знайти що:"
+      tag-replace-with: "Замінити на:"
+      tag-find-next: Знайти далі
+      tag-replace: Замінити
+      tag-replace-all: Замінити все
+      tag-match-case: Збіг регістру
+      tag-keep-linebreaks: Зберігати розриви рядків
+
+  sensitive-data-masker:
+    title: Маскування конфіденційних даних
+    description: Очищуйте конфіденційні дані з текстового контенту (наприклад, логів)
+    texts:
+      label-your-custom-cleaning-regex-es-case-insensitive: "Ваші власні регулярні вирази очищення (без урахування регістру):"
+      placeholder-your-custom-cleaning-regex-es: Ваші власні регулярні вирази для очищення
+      placeholder-no-fallback: Без резервного варіанту
+      input-label-your-log-textual-data: "Ваші дані журналу/тексту:"
+      input-placeholder-paste-your-log-textual-data-here: Вставте сюди ваші дані журналу/тексту...
+      output-label-cleaned-version: "Очищена версія:"
+
+  htpasswd-generator:
+    title: Генератор Htpasswd/Htaccess
+    description: Генеруйте користувача/пароль для htpasswd/htaccess
+    texts:
+      label-bcrypt: Bcrypt
+      label-md5: МД5
+      label-apache-md5-apr1: Apache MD5 (1 квітня)
+      label-sha256: SHA256
+      label-sha512: SHA512
+      label-username: Ім&#39;я користувача
+      placeholder-your-username: Ваше ім&#39;я користувача...
+      label-password: Пароль
+      placeholder-your-password: Ваш пароль...
+      label-hash-method: "Хеш-метод:"
+      label-salt-rounds: "Соляні кружечки: "
+      placeholder-salt-rounds: Соляні кружечки...
+      label-htpasswd-content: "вміст htpasswd:"
+    service:
+      text:
+        unsupported-algorithm: Непідтримуваний алгоритм
+        md5-does-not-currently-support-non-ascii-characters-0: MD5 наразі не підтримує символи, відмінні від ASCII.
+        md5-does-not-currently-support-non-ascii-characters: MD5 наразі не підтримує символи, відмінні від ASCII.
+
+  crc-calculator:
+    title: Калькулятор CRC
+    description: Обчислюйте CRC тексту або файлу (CRC1, CRC8, CRC16, CRC32 тощо)
+    texts:
+      label-binary-base-2: Двійкова система числення (основа 2)
+      label-hexadecimal-base-16: Шістнадцяткова система числення (з основою 16)
+      label-base64-base-64: Base64 (база 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 з безпечними символами URL)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Перетягніть файл сюди або клацніть, щоб вибрати файл
+      placeholder-paste-string-to-crc: Вставити рядок у CRC...
+      label-your-text-to-crc: "Ваше повідомлення до CRC:"
+      label-digest-encoding: Дайджест-кодування
+      tag-or: АБО
+      tag-an-error-occured-hashing-file: Сталася помилка хешування файлу.
+
+  file-hasher:
+    title: Хешування файлів
+    description: Обчислюйте хеш файлів
+    texts:
+      label-binary-base-2: Двійкова система числення (основа 2)
+      label-hexadecimal-base-16: Шістнадцяткова система числення (з основою 16)
+      label-base64-base-64: Base64 (база 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 з безпечними символами URL)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Перетягніть файл сюди або клацніть, щоб вибрати файл
+      label-digest-encoding: Дайджест-кодування
+      tag-createblake2b-bits-number-key-idatatype-promise: "createBLAKE2b, // (бітс?: число, ключ?: IDataType): Обіцянка"
+      tag-createmd5-promise: "createMD5, // (): Обіцянка"
+      tag-createripemd160-promise: "createRIPEMD160, // (): Обіцянка"
+      tag-createsha1-promise: "createSHA1, // (): Обіцянка"
+      tag-createsha224-promise: "createSHA224, // (): Обіцянка"
+      tag-createsha256-promise: "createSHA256, // (): Обіцянка"
+      tag-createsha512-promise: "createSHA512, // (): Обіцянка"
+      tag-createsm3-promise: "createSM3, // (): Обіцянка"
+      tag-createwhirlpool-promise: "createWhirlpool, // (): Обіцянка"
+      tag-createxxhash32-seed-number-promise: "// createXXHash32, //(насіннєве значення: число): Обіцянка"
+      tag-createxxhash64-seedlow-number-seedhigh-number-promise: "// createXXHash64, //(seedLow: число, seedHigh: число): Обіцянка"
+      tag-createxxhash3-seedlow-number-seedhigh-number-promise: "// createXXHash3, //(seedLow: число, seedHigh: число): Обіцянка"
+      tag-createxxhash128-seedlow-number-seedhigh-number-promise: "// createXXHash128, //(seedLow: число, seedHigh: число): Обіцянка"
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise:
+        "BLAKE2b: await createBLAKE2b(), // (бітс?: число, ключ?: IDataType):
+        Обіцянка"
+      tag-md5-await-createmd5-promise: "MD5: await createMD5(), // (): Обіцянка"
+      tag-ripemd160-await-createripemd160-promise: "RIPEMD160: await createRIPEMD160(), // (): Обіцянка"
+      tag-sha1-await-createsha1-promise: "SHA1: await createSHA1(), // (): Обіцянка"
+      tag-sha224-await-createsha224-promise: "SHA224: await createSHA224(), // (): Обіцянка"
+      tag-sha256-await-createsha256-promise: "SHA256: await createSHA256(), // (): Обіцянка"
+      tag-sha512-await-createsha512-promise: "SHA512: await createSHA512(), // (): Обіцянка"
+      tag-sm3-await-createsm3-promise: "SM3: await createSM3(), // (): Обіцянка"
+      tag-whirlpool-await-createwhirlpool-promise: "Whirlpool: await createWhirlpool(), // (): Обіцянка"
+
+  argon2-hash:
+    title: Argon2 Хешер
+    description: Обчисліть хеші Argon2 з параметрами
+    texts:
+      label-argon2id: Argon2id
+      label-argon2i: Аргон2і
+      label-argon2d: Аргон2д
+      label-hex: Шістнадцятковий
+      label-encoded: Закодовано
+      label-binary: Бінарний
+      label-algorithm: "Алгоритм:"
+      label-password: "Пароль:"
+      placeholder-enter-password: Введіть пароль
+      label-salt-hex: "Сіль (шестигранна):"
+      placeholder-optional-hex-salt: Додаткова шестигранна сіль
+      label-iterations: "Ітерації:"
+      label-memory-kib: "Пам'ять (КіБ):"
+      label-parallelism: "Паралелізм:"
+      label-hash-length: "Довжина хешу:"
+      label-output-type: "Тип виходу:"
+      title-argon2-hash: Хеш Argon2
+      tag-generate: Згенерувати
+

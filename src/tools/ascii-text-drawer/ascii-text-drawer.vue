@@ -9,7 +9,11 @@ const output = ref('');
 const errored = ref(false);
 const processing = ref(false);
 
-figlet.defaults({ fontPath: '//unpkg.com/figlet@1.6.0/fonts/' });
+// Fonts are served from this deployment rather than from unpkg: the previous protocol-relative CDN
+// URL resolved to file:// when the build was opened from disk, was blocked by strict connect-src
+// policies, and left the tool stuck on "Loading font..." with no error whenever the CDN was
+// unreachable. See the figletFonts plugin in vite.config.ts.
+figlet.defaults({ fontPath: `${import.meta.env.BASE_URL}figlet-fonts/` });
 
 watchEffect(async () => {
   processing.value = true;

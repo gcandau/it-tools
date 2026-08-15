@@ -18,4 +18,14 @@ module.exports = {
       }],
     }],
   },
+
+  overrides: [
+    {
+      // The API runs on Node, where reading configuration from `process.env` is the norm.
+      files: ['server/**/*.ts', 'api/**/*.ts'],
+      rules: {
+        'n/prefer-global/process': 'off',
+      },
+    },
+  ],
 };
