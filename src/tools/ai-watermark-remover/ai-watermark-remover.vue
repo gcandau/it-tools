@@ -240,6 +240,11 @@ const keptFindings = computed(() =>
       </div>
     </c-card>
 
+    <ApiUsage
+      endpoint="ai/watermark/remove"
+      :body="{ text: 'Paste the text to clean here.', options: { invisible: true, homoglyphs: true, typography: true } }"
+    />
+
     <c-card title="What this tool can and cannot remove">
       <div text-sm op-80>
         <p>

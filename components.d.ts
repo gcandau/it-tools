@@ -13,6 +13,8 @@ declare module '@vue/runtime-core' {
     About: typeof import('./src/pages/About.vue')['default']
     AiTextDetector: typeof import('./src/tools/ai-text-detector/ai-text-detector.vue')['default']
     AiWatermarkRemover: typeof import('./src/tools/ai-watermark-remover/ai-watermark-remover.vue')['default']
+    'ApiDocs.page': typeof import('./src/pages/ApiDocs.page.vue')['default']
+    ApiUsage: typeof import('./src/components/ApiUsage.vue')['default']
     App: typeof import('./src/App.vue')['default']
     AsciiTextDrawer: typeof import('./src/tools/ascii-text-drawer/ascii-text-drawer.vue')['default']
     'Base.layout': typeof import('./src/layouts/base.layout.vue')['default']

@@ -172,6 +172,8 @@ const metricRows = computed(() => {
     <c-card v-if="result.wordCount > 0" title="Measurements">
       <c-table :data="metricRows" :headers="{ metric: 'Metric', value: 'Value' }" />
     </c-card>
+
+    <ApiUsage endpoint="ai/detect" :body="{ text: 'Paste at least 300 words here.' }" />
   </div>
 </template>
 
