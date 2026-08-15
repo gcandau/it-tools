@@ -532,11 +532,50 @@ covers exactly one tool.
 
 ### 10.1 Ported
 
+27 tools, taken from the `sharevb` tree and adapted to this fork's conventions.
+
 | PR | Tool | Category |
 |---|---|---|
-| _(updated as ports land)_ | | |
+| #363 | Argon2 hasher | Crypto |
+| #1141 | File hasher | Crypto |
+| #1140 | CRC calculator | Crypto |
+| #902 | htpasswd generator | Crypto |
+| #1260 | Passphrase generator | Crypto |
+| #1182 | Sensitive data masker | Text |
+| #1290 | Smart text replacer | Text |
+| #1303 | List comparer | Text |
+| #1021 | Morse converter | Converter |
+| #1258 | Punycode converter | Converter |
+| #904 | HTML to Markdown | Converter |
+| #1002 | JSON to TypeScript | Converter |
+| #1166 | JSON to Schema | Converter |
+| #966 | JSON escaper | Converter |
+| #943 | JSON sort master | Development |
+| #961 | HTML cleaner | Development |
+| #1106 | Markdown TOC generator | Development |
+| #963 | IPv6 subnet calculator | Network |
+| #871 | CIDR to IP range | Network |
+| #869 | IP range to CIDR | Network |
+| #959 | URL cleaner | Network |
+| #1029 | Port numbers | Network |
+| #1284 | Timezone converter | Date & time |
+| #1324 | Duration calculator | Date & time |
+| #1330 | Many units converter | Measurement |
+| #1304 | SLA calculator | Measurement |
+| #1320 | Luhn validator | Data |
 
-### 10.2 Selected for porting
+Fixes applied to existing tools: #1774 (figlet fonts, now served locally),
+#1085 (text-to-binary UTF-8), #1087 (text-to-unicode non-BMP), #1152 (bcrypt crashes),
+#986 (SHA3 output sizes), #1441 (UUID v6/v7), #1440 (command-palette result cap).
+
+**Not ported, with reasons.** `unicode-search` (#1295), `text-to-unicode-names` (#1183) and
+`iso-3166-searcher` (#1327) need a full Unicode database or `countries-db` plus a search composable
+this fork lacks; `certificate-key-parser` (#917) pulls in `openpgp` and `sshpk`; `jq-tester` (#1262)
+needs `jq-wasm`; `stacktrace-prettier` (#1307) needs four stack-parsing libraries and a style store;
+`json-linter` (#1015) and `docker-compose-to-docker-run-converter` (#847) need a Monaco editor
+wrapper; `jwt-generator` (#1453) is written against `jose` v6 and `jwt-decode` v4.
+
+### 10.2 Originally selected for porting
 
 **Crypto** — #363 Argon2 · #1453 JWT generator + verify · #1141 File hasher · #1140 CRC calculator ·
 #902 htpasswd generator · #1260 Passphrase generator · #1515 HOTP · #917 Certificate/key parser
