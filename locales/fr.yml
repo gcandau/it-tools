@@ -54,6 +54,7 @@ search:
 tools:
   categories:
     favorite-tools: 'Vos outils favoris'
+    ai: IA
     crypto: Cryptographie
     converter: Convertisseur
     web: Web
@@ -64,6 +65,13 @@ tools:
     measurement: Mesure
     text: Texte
     data: Données
+
+  ai-watermark-remover:
+    title: "Suppression de filigranes d'IA"
+    description: >-
+      Détecte et supprime les caractères Unicode invisibles, les charges cachées du bloc Tags, les
+      homoglyphes et la typographie non-ASCII d'un texte. Décode les messages dissimulés et détaille
+      précisément ce qui a été modifié. Tout se passe dans votre navigateur.
 
   token-generator:
     title: Générateur de token

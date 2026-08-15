@@ -60,6 +60,7 @@ search:
 tools:
   categories:
     favorite-tools: 'Your favorite tools'
+    ai: AI
     crypto: Crypto
     converter: Converter
     web: Web
@@ -70,6 +71,13 @@ tools:
     measurement: Measurement
     text: Text
     data: Data
+
+  ai-watermark-remover:
+    title: AI watermark remover
+    description: >-
+      Detect and remove invisible Unicode characters, hidden Tags-block payloads, homoglyphs and
+      non-ASCII typography from a text. Decodes smuggled messages and reports exactly what was
+      changed. Runs entirely in your browser.
 
   password-strength-analyser:
     title: Password strength analyser
