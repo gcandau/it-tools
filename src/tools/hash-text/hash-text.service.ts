@@ -9,14 +9,22 @@ export function convertHexToBin(hex: string) {
     .join('');
 }
 
+/**
+ * SHA3 defaults to a 512-bit digest in crypto-js, so the shorter Keccak output sizes are exposed
+ * explicitly rather than leaving callers to guess which one they got.
+ */
 export const hashAlgorithms = {
   MD5,
   SHA1,
-  SHA256,
   SHA224,
-  SHA512,
+  SHA256,
   SHA384,
+  SHA512,
   SHA3,
+  'SHA3-224': (message: string) => SHA3(message, { outputLength: 224 }),
+  'SHA3-256': (message: string) => SHA3(message, { outputLength: 256 }),
+  'SHA3-384': (message: string) => SHA3(message, { outputLength: 384 }),
+  'SHA3-512': (message: string) => SHA3(message, { outputLength: 512 }),
   RIPEMD160,
 } as const;
 

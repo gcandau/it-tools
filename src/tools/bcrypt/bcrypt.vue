@@ -2,17 +2,23 @@
 import { compareSync, hashSync } from 'bcryptjs';
 import { useThemeVars } from 'naive-ui';
 import { useCopy } from '@/composable/copy';
+import { withDefaultOnError } from '@/utils/defaults';
 
 const themeVars = useThemeVars();
 
 const input = ref('');
 const saltCount = ref(10);
-const hashed = computed(() => hashSync(input.value, saltCount.value));
+
+// bcryptjs throws on an out-of-range salt count and on a malformed hash. Left unguarded, those
+// throws escape a computed during render and blank the whole tool.
+const hashed = computed(() => withDefaultOnError(() => hashSync(input.value, saltCount.value), ''));
 const { copy } = useCopy({ source: hashed, text: 'Hashed string copied to the clipboard' });
 
 const compareString = ref('');
 const compareHash = ref('');
-const compareMatch = computed(() => compareSync(compareString.value, compareHash.value));
+const compareMatch = computed(() =>
+  withDefaultOnError(() => compareSync(compareString.value, compareHash.value), false),
+);
 </script>
 
 <template>

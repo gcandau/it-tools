@@ -81,8 +81,15 @@ export const useCommandPaletteStore = defineStore('command-palette', () => {
     },
   });
 
+  // Five was fine for the original tool set; with well over a hundred tools a search like "json"
+  // or "ip" was hiding most of its own matches behind the cap.
+  const maxSearchResultsPerCategory = 12;
+
   const filteredSearchResult = computed(() =>
-    _.chain(searchResult.value).groupBy('category').mapValues(categoryOptions => _.take(categoryOptions, 5)).value());
+    _.chain(searchResult.value)
+      .groupBy('category')
+      .mapValues(categoryOptions => _.take(categoryOptions, maxSearchResultsPerCategory))
+      .value());
 
   return {
     filteredSearchResult,

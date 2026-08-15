@@ -3,18 +3,38 @@ import { convertTextToUnicode, convertUnicodeToText } from './text-to-unicode.se
 
 describe('text-to-unicode', () => {
   describe('convertTextToUnicode', () => {
-    it('a text string is converted to unicode representation', () => {
-      expect(convertTextToUnicode('A')).toBe('&#65;');
-      expect(convertTextToUnicode('linke the string convert to unicode')).toBe('&#108;&#105;&#110;&#107;&#101;&#32;&#116;&#104;&#101;&#32;&#115;&#116;&#114;&#105;&#110;&#103;&#32;&#99;&#111;&#110;&#118;&#101;&#114;&#116;&#32;&#116;&#111;&#32;&#117;&#110;&#105;&#99;&#111;&#100;&#101;');
+    it('converts ASCII text to decimal entities', () => {
+      expect(convertTextToUnicode('AB')).toBe('&#65;&#66;');
       expect(convertTextToUnicode('')).toBe('');
+    });
+
+    it('converts characters outside the Basic Multilingual Plane as a single code point', () => {
+      // U+1F600, not the two surrogate halves 0xD83D and 0xDE00.
+      expect(convertTextToUnicode('😀')).toBe('&#128512;');
+    });
+
+    it('handles mixed scripts', () => {
+      expect(convertTextToUnicode('a✓')).toBe('&#97;&#10003;');
     });
   });
 
   describe('convertUnicodeToText', () => {
-    it('an unicode string is converted to its text representation', () => {
-      expect(convertUnicodeToText('&#65;')).toBe('A');
-      expect(convertUnicodeToText('&#108;&#105;&#110;&#107;&#101;&#32;&#116;&#104;&#101;&#32;&#115;&#116;&#114;&#105;&#110;&#103;&#32;&#99;&#111;&#110;&#118;&#101;&#114;&#116;&#32;&#116;&#111;&#32;&#117;&#110;&#105;&#99;&#111;&#100;&#101;')).toBe('linke the string convert to unicode');
-      expect(convertUnicodeToText('')).toBe('');
+    it('decodes decimal entities', () => {
+      expect(convertUnicodeToText('&#65;&#66;')).toBe('AB');
     });
+
+    it('decodes code points above the Basic Multilingual Plane', () => {
+      expect(convertUnicodeToText('&#128512;')).toBe('😀');
+    });
+
+    it('leaves text without entities untouched', () => {
+      expect(convertUnicodeToText('plain text')).toBe('plain text');
+    });
+  });
+
+  it('round-trips every script', () => {
+    for (const text of ['hello', 'héllo', 'Привет', '日本語', '😀🎉', '👨‍👩‍👧']) {
+      expect(convertUnicodeToText(convertTextToUnicode(text))).toBe(text);
+    }
   });
 });

@@ -144,7 +144,8 @@ describe('api', () => {
 
       expect(data.digests.MD5).toBe('5d41402abc4b2a76b9719d911017c592');
       expect(data.digests.SHA256).toBe('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824');
-      expect(Object.keys(data.digests)).toHaveLength(8);
+      expect(Object.keys(data.digests)).toHaveLength(12);
+      expect(data.digests['SHA3-256']).toHaveLength(64);
     });
 
     it('hashes with a single algorithm and encoding', async () => {

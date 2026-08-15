@@ -1,7 +1,7 @@
 import { HmacMD5, HmacRIPEMD160, HmacSHA1, HmacSHA224, HmacSHA256, HmacSHA3, HmacSHA384, HmacSHA512, enc } from 'crypto-js';
 import bcrypt from 'bcryptjs';
 import { ulid } from 'ulid';
-import { NIL as uuidNil, v1 as uuidV1, v3 as uuidV3, v4 as uuidV4, v5 as uuidV5 } from 'uuid';
+import { NIL as uuidNil, v1 as uuidV1, v3 as uuidV3, v4 as uuidV4, v5 as uuidV5, v6 as uuidV6, v7 as uuidV7 } from 'uuid';
 import { booleanQuery, defineEndpoint, z } from '../endpoint';
 import { badRequest } from '../errors';
 import {
@@ -144,7 +144,7 @@ export const cryptoEndpoints = [
     tag: 'Crypto',
     summary: 'Generate one or more UUIDs',
     input: z.object({
-      version: z.enum(['nil', 'v1', 'v3', 'v4', 'v5']).default('v4'),
+      version: z.enum(['nil', 'v1', 'v3', 'v4', 'v5', 'v6', 'v7']).default('v4'),
       count: z.coerce.number().int().min(1).max(100).default(1),
       namespace: z.string().optional().describe('Required for v3 and v5.'),
       name: z.string().optional().describe('Required for v3 and v5.'),
@@ -160,6 +160,12 @@ export const cryptoEndpoints = [
         }
         if (version === 'v4') {
           return uuidV4();
+        }
+        if (version === 'v6') {
+          return uuidV6();
+        }
+        if (version === 'v7') {
+          return uuidV7();
         }
 
         if (!namespace || name === undefined) {

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { v1 as generateUuidV1, v3 as generateUuidV3, v4 as generateUuidV4, v5 as generateUuidV5, NIL as nilUuid } from 'uuid';
+import { v1 as generateUuidV1, v3 as generateUuidV3, v4 as generateUuidV4, v5 as generateUuidV5, v6 as generateUuidV6, v7 as generateUuidV7, NIL as nilUuid } from 'uuid';
 import { useCopy } from '@/composable/copy';
 import { computedRefreshable } from '@/composable/computedRefreshable';
 import { withDefaultOnError } from '@/utils/defaults';
 
-const versions = ['NIL', 'v1', 'v3', 'v4', 'v5'] as const;
+const versions = ['NIL', 'v1', 'v3', 'v4', 'v5', 'v6', 'v7'] as const;
 
 const version = useStorage<typeof versions[number]>('uuid-generator:version', 'v4');
 const count = useStorage('uuid-generator:quantity', 1);
@@ -18,7 +18,8 @@ const validUuidRules = [
         return true;
       }
 
-      return Boolean(value.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/));
+      // 1-7: v6 (reordered time) and v7 (Unix-epoch time) are now generated too.
+      return Boolean(value.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-7][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/));
     },
   },
 ];
@@ -29,11 +30,14 @@ const generators = {
     clockseq: index,
     msecs: Date.now(),
     nsecs: Math.floor(Math.random() * 10000),
-    node: Array.from({ length: 6 }, () => Math.floor(Math.random() * 256)),
+    // uuid v11 takes the node identifier as a Uint8Array rather than a plain number array.
+    node: Uint8Array.from({ length: 6 }, () => Math.floor(Math.random() * 256)),
   }),
   v3: () => generateUuidV3(v35Args.value.name, v35Args.value.namespace),
   v4: () => generateUuidV4(),
   v5: () => generateUuidV5(v35Args.value.name, v35Args.value.namespace),
+  v6: () => generateUuidV6(),
+  v7: () => generateUuidV7(),
 };
 
 const [uuids, refreshUUIDs] = computedRefreshable(() => withDefaultOnError(() =>
