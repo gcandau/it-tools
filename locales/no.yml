@@ -66,10 +66,508 @@ tools:
     images and videos: 'Bilder & Videoer'
     development: Utvikling
     network: Nettverk
+    date & time: 'Dato og tid'
     math: Matte
     measurement: Måling
     text: Tekst
     data: Data
+
+  json-to-typescript:
+    title: Json til Typescript
+    description: Konverter JSON til Typescript-kode
+    texts:
+      message-provided-json-is-not-valid: Forutsatt at JSON ikke er gyldig.
+      title-json-to-typescript: JSON til Typescript
+      placeholder-put-your-json-string-here: Sett json-strengen din her ...
+      label-json-to-typescript: JSON til Typescript
+      label-root-name: Rotnavn
+      title-your-typescript-code: Typescript-koden din
+      tag-use-interfaces-only: Bruk kun grensesnitt
+      tag-transform-property-names-to-javascripty: Transformer egenskapsnavn til JavaScript
+      tag-explicitly-name-unions: Navngi fagforeninger eksplisitt
+      tag-verify-json-parse-results-at-runtime: Bekreft JSON.parse-resultater under kjøring
+      tag-use-union-type-instead-of-enum: Bruk unionstype i stedet for enum
+      tag-use-types-instead-of-interfaces: Bruk typer i stedet for grensesnitt
+      tag-use-string-instead-of-enum-for-single-value-enums: Bruk streng i stedet for enum for enums med én verdi
+      tag-use-readonly-type-members: Bruk skrivebeskyttede typemedlemmer
+      tag-make-all-properties-optional: Gjør alle egenskaper valgfrie
+
+  passphrase-generator:
+    title: Passordgenerator
+    description: Generer tilfeldige, huskebare passordfraser
+    texts:
+      text-passphrase-s-copied-to-clipboard: Passordfrase(r) kopiert til utklippstavlen!
+      label-add-numbers-after-x-words: Legg til tall etter X ord
+      label-max-passphrase-len: Maks. passordfraselengde
+      label-capitalize: Stor bruk
+      label-separator: Separator
+      placeholder-put-separator-char: Sett inn skilletegn
+      label-ending-salt-chars: Slutter med salttegn
+      placeholder-put-characters-to-appended-to-end-of-passphrase: Legg til tegn på slutten av passordfrasen
+      label-number-of-passphrase-to-generate: Antall passordfraser som skal genereres
+      placeholder-passphrase: Passordfrase...
+      tag-copy: Kopiere
+      tag-refresh: Forfriske
+      cannot-generate-a-passphrase-of-minlen-value-maxlen-value-characters-please-retry:
+        "# Kan ikke generere et passord på [{0} - {1}] tegn med gjeldende
+        innstillinger. Prøv å endre ordantallet."
+      words-words: Ord ({0})
+      label-min-passphrase-len: "Min. passordlengde:"
+
+  luhn-validator:
+    title: Luhn-validator
+    description: Sjekk og generer nøkkel for identifikator validert av et Luhn-sjekknummer
+    texts:
+      label-is-valid: Er gyldig?
+      label-luhn-key: Luhn Key
+      label-value-with-luhn-key: Verdi med Luhn Key
+      placeholder-enter-a-luhn-validated-value: Skriv inn en «Luhn-validert»-verdi...
+      label-probably-correct: Sannsynligvis riktig
+      title-infos: Info
+      tag-invalid-luhn-key: Ugyldig Luhn-nøkkel.
+
+  sla-calculator:
+    title: SLA-kalkulator
+    description: Kalkulator for servicenivåavtale
+    texts:
+      message-invalid-duration: Ugyldig varighet
+      title-sla-to-downtimes: SLA for nedetid
+      label-agreed-sla: Avtalt tjenestenivåavtale
+      label-daily-downtime: Daglig nedetid
+      label-weekly-downtime: Ukentlig nedetid
+      label-monthly-downtime: Månedlig nedetid
+      label-quarterly-downtime: Kvartalsvis nedetid
+      label-yearly-downtime: Årlig nedetid
+      title-downtime-to-sla: Nedetid i henhold til tjenestenivåavtale
+      label-downtime-duration: Varighet av nedetid
+      placeholder-put-downtime-duration-here: Angi varigheten av nedetid her ...
+      label-daily-sla: Daglig tjenestenivåavtale
+      label-weekly-sla: Ukentlig tjenestenivåavtale
+      label-monthly-sla: Månedlig tjenestenivåavtale
+      label-quarterly-sla: Kvartalsvis tjenestenivåavtale
+      label-yearly-sla: Årlig tjenestenivåavtale
+      title-weekdays-hours: Åpningstider på hverdager
+      label-monday: mandag
+      label-tuesday: tirsdag
+      label-wednesday: onsdag
+      label-thursday: torsdag
+      label-friday: fredag
+      label-saturday: lørdag
+      label-sunday: søndag
+
+  many-units-converter:
+    title: Mange enheter konverter
+    description: Konverter alle slags enheter
+    texts:
+      label-units-expression: Enhetsuttrykk
+      placeholder-please-enter-an-unit-expression-ie-1d-2m: Vennligst skriv inn et enhetsuttrykk, f.eks. &#39;1d 2m&#39;
+      label-target-unit: "Målenhet:"
+      placeholder-select-the-target-unit: Velg målenheten
+      title-result: Resultat
+      label-best-target-unit: Beste målenhet
+      label-selected-target-unit-outputunit: Valgt målenhet ({0})
+      title-other-units-conversion-tools: Andre verktøy for enhetskonvertering
+
+  duration-calculator:
+    title: Varighetskalkulator
+    description: Beregn/analyser varigheter
+    texts:
+      label-duration-s: Varighet(er)
+      placeholder-please-enter-duration-one-per-line-with-optional-sign: Vennligst angi varighet, én per linje med valgfritt fortegn
+      title-total: Total
+      label-prettified: Forskjønnet
+      label-prettified-full: Forskjønnet (fullstendig)
+      label-prettified-colon: Forskjønnet (kolon)
+      label-prettified-days: Forskjønnet (dager)
+      label-prettified-hours: Forskjønnet (timer)
+      label-prettified-iso8601: Forskjønnet (ISO8601)
+      label-milliseconds: Millisekunder
+      label-seconds: Sekunder
+      label-minutes: Minutter
+      label-hours: Timer
+      label-days: Dager
+      label-weeks: Uker
+      label-years: År
+      title-lines-errors: Linjefeil
+      tag-supports-comment-line-hh-mm-ss-fff-3d-1h-3s-p4dt12h20m20-3s:
+        "Støtter: kommentar (# linje), HH:MM:SS.FFF, 3d 1t 3s...,
+        P4DT12H20M20.3S.."
+
+  timezone-converter:
+    title: Tidssonekonverter
+    description: Konverter dato og klokkeslett fra en tidssone til andre og få
+      informasjon om tidssone kontra land
+    texts:
+      title-timezones-date-time-converter: Tidssoner Dato-tid-konverter
+      label-timezone: Tidssone
+      label-date-time-interval-to-convert: "Dato-/tidsintervall som skal konverteres:"
+      label-current-timezone-offset: "Gjeldende tidssoneforskyvning:"
+      label-use-24-hour-time-format: Bruk 24-timers tidsformat
+      title-date-time-in-other-timezones: Dato og klokkeslett i andre tidssoner
+      placeholder-please-select-a-timezone: Vennligst velg en tidssone
+      title-country-to-timezones: Land til tidssoner
+      label-country: Land
+      title-timezones-to-countries: Tidssoner til land
+
+  port-numbers:
+    title: Portnumre
+    description: Søk etter tildelt bruk av en gitt port og protokoll
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      title-port-search: Søk etter havner
+      label-port-number: Portnummer
+      label-protocol: Protokoll
+      label-type: Type
+      label-description: Beskrivelse
+
+  url-cleaner:
+    title: URL-renser
+    description: Rengjør annonsesporings-, UTM-, Facebook- og andre
+      annonseleverandørparametere fra en URL
+    texts:
+      title-clean-url: Rengjør nettadressen
+      placeholder-put-your-url-here: Legg inn url-en din her...
+      label-url-to-clean: Nettadresse som skal rengjøres
+      label-cleaned-url: Renset nettadresse
+      placeholder-the-cleaned-url-will-be-here: Den rensede nettadressen vil være her
+      tag-is-clean: Er ren
+      tag-was-not-clean: Var ikke ren
+
+  ip-range-to-cidr:
+    title: Kalkulator for IPv4/6-område til CIDR(er)
+    description: Beregn CIDR(er) fra et IP-område (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-address: Ugyldig IPv4/6-adresse
+      label-start-address: Startadresse
+      placeholder-start-ipv4-6-address: Start IPv4/6-adresse...
+      label-end-address: Sluttadresse
+      placeholder-end-ipv4-6-address: Slutt på IPv4/6-adresse...
+      title-cidr: CIDR
+      title-invalid-combination-of-start-and-end-ipv4-6-address: Ugyldig kombinasjon av start- og slutt-IPv4/6-adresse
+      title-invalid-combination-of-ip-version-4-6: Ugyldig kombinasjon av IP-versjon 4/6
+      tag-switch-start-and-end-ipv4-6-address: Bytt start- og slutt-IPv4/6-adresse
+      tag-start-ip-and-end-ip-must-be-of-same-version-ipv4-or-ipv6: "Start-IP og slutt-IP må være av samme versjon: IPv4 eller IPv6"
+
+  ip-cidr-to-range:
+    title: Kalkulator for IPv4/6 CIDR til IP-område
+    description: Beregn IP-område fra en CIDR (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-cidr: Ugyldig IPv4/6 CIDR
+      label-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (f.eks. 1.0.0.0/23 eller 1.1.1.1/255.255.252.0 eller
+        1.1.1.1–2.2.2.2 eller 10.0.0.*)
+      placeholder-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (f.eks. 1.0.0.0/23 eller 1.1.1.1/255.255.252.0 eller
+        1.1.1.1–2.2.2.2 eller 10.0.0.*)
+      title-resulting-cidr: Resulterende CIDR
+      label-cidr: CIDR
+      title-ipv4-6-range: IPv4/6-område
+      label-start-ip-address: Start-IP-adresse
+      label-end-ip-address: Slutt-IP-adresse
+      label-network-type: Nettverkstype
+
+  ipv6-subnet-calculator:
+    title: Ipv6-subnettkalkulator
+    description: Analyser IPv6 CIDR-blokkene dine og få all informasjonen du trenger
+      om undernettverket ditt.
+    texts:
+      message-we-cannot-parse-this-address-check-the-format: Vi kan ikke analysere denne adressen, sjekk formatet.
+      label-full-address: Fullstendig adresse
+      label-short-address: Kort adresse
+      label-address-as-binary: Adresse som binær
+      label-address-as-integer: Adresse som heltall
+      label-address-as-decimal: Adresse som desimal
+      label-address-as-hex: Adresse som heksadesimal
+      label-network-mask-size: Størrelse på nettverksmaske
+      label-network-mask: Nettverksmaske
+      label-network-mask-as-integer: Nettverksmaske som heltall
+      label-network-mask-as-binary: Nettverksmaske som binær
+      label-total-ip-addresses: Totalt antall IP-adresser
+      label-total-networks: Totalt antall nettverk
+      label-first-address: Første adresse
+      label-last-address: Siste adresse
+      label-scope: Omfang
+      label-6to4-properties: 6to4 Eiendommer
+      label-teredo-properties: Teredo Properties
+      label-arpa: ARPA
+      label-microsoft-unc-transcription: Microsoft UNC-transkripsjon
+      label-type: Type
+      label-an-ipv6-address-with-or-without-mask: En IPv6-adresse med eller uten maske
+      placeholder-the-ipv6-address: Ipv6-adressen...
+
+  markdown-toc-generator:
+    title: Markdown-innholdsfortegnelsesgenerator
+    description: Generer en innholdsfortegnelse fra en markdown-fil/-innhold
+    texts:
+      title-options: Alternativer
+      label-max-heading-level: "Maks. overskriftsnivå:"
+      placeholder-max-heading-level: Maks. kursnivå...
+      label-bullet-chars: Punkttegn
+      placeholder-bullet-chars: Punkttegn
+      label-anchors-prefix: Ankerprefiks
+      placeholder-anchors-prefix: Ankerprefiks
+      label-indents: "Innrykk: "
+      placeholder-indents: Innrykk...
+      label-comment-styles: Kommentarstiler
+      placeholder-comment-styles: Kommentarstiler
+      title-input-markdown: Nedsatt inngangspris
+      placeholder-put-your-markdown-here: Sett inn poenget ditt her...
+      title-output-markdown-with-toc: Nedsatt produksjon med innholdsfortegnelse
+      tag-generate-anchors: Generer ankere
+      tag-advanced: Avansert
+      tag-concat-spaces: Konkaterte rom
+      tag-you-can-paste-a-document-with-existing-toc-generated-by-this-tool-or-add-a:
+        Du kan lime inn et dokument med eksisterende innholdsfortegnelse
+        (generert av dette verktøyet) eller legge til en
+      tag-marker-in-your-document-on-a-single-line: markør i dokumentet ditt (på én linje)
+
+  html-cleaner:
+    title: Html-renser
+    description: Ren HTML
+    texts:
+      placeholder-your-html-content: HTML-innholdet ditt...
+      label-your-html-to-clean-can-paste-from-clipboard: "HTML-koden din som skal ryddes (kan limes inn fra utklippstavlen):"
+      label-output-cleaned-html: "Utdata renset HTML:"
+
+  json-sort-master:
+    title: JSON-sorteringsmaster
+    description: Sorter JSON-en din etter nøkler og verdier.
+    texts:
+      message-provided-json-is-not-valid: Forutsatt at JSON ikke er gyldig.
+      label-key-name: "Nøkkelnavn:"
+      label-key-value: Nøkkelverdi
+      label-key-name-descending: Nøkkelnavn (synkende)
+      label-key-value-descending: Nøkkelverdi (synkende)
+      label-sort-method: Sorteringsmetode
+      label-your-raw-json: Din rå JSON
+      placeholder-paste-your-raw-json-here: Lim inn den rå JSON-en din her...
+      label-sorted-version-of-your-json: Sortert versjon av JSON-en din
+
+  json-escaper:
+    title: Json Escaper/Unscaper
+    description: Escape- og unescape-JSON-streng
+    texts:
+      title-escape-json-string: Escape JSON-streng
+      placeholder-put-your-string-to-escape: Sett på strengen din for å rømme ...
+      label-string-to-escape: Streng for å escape
+      label-escaped-string: Escaped streng
+      title-unescape-json-string: Unescape JSON-streng
+      placeholder-put-your-string-to-unescape: Sett strengen din til unescape...
+      label-string-to-unescape: Streng som skal unescape-kode
+      label-unescaped-string: Uescapet streng
+      label-wrap-in-quotes: Pakk inn anførselstegn
+
+  json-to-schema:
+    title: Json til skjema
+    description: Konverter JSON-data til JSON-skjema, MySQL DDL, Mongoose-skjema,
+      Google BigQuery-skjema eller ClickHouse-tabellskjema
+    texts:
+      label-generic: Generisk
+      label-json-schema: JSON-skjema
+      label-mysql-table-schema: MySQL-tabellskjema
+      label-mongoose-schema: Mongoose-skjema
+      label-google-bigquery-schema: Google BigQuery-skjema
+      label-clickhouse-table-schema: ClickHouse-tabellskjema
+      message-provided-json-is-not-valid: Forutsatt at JSON ikke er gyldig.
+      placeholder-target-schema-format: Målskjemaformat
+      label-table-name: Tabellnavn
+      placeholder-table-name: Tabellnavn
+      input-label-your-json: Din JSON
+      input-placeholder-paste-your-json-here: Lim inn JSON-en din her ...
+      output-label-your-schema: Skjemaet ditt
+
+  html-to-markdown:
+    title: HTML til prisnedsettelse
+    description: Konverter HTML (enten fra utklippstavlen) til Markdown
+    texts:
+      placeholder-your-html-content: Html-innholdet ditt...
+      label-your-html-to-convert-can-paste-from-clipboard: "Din HTML-fil som skal konverteres (kan limes inn fra utklippstavlen):"
+      label-output-markdown: "Nedsatt utgangspris:"
+      label-heading-style: "Overskriftsstil:"
+      label-emphasis-style: "Vektleggingsstil:"
+      label-hash: Hash (#)
+      label-underline: Understrek (=/-)
+      label-surround-heading: Surround (= Overskrift =)
+      label-asterisk: Stjerne (*)
+      label-underscore: Understrek (_)
+      label-tilde: Tilde (~)
+
+  punycode-converter:
+    title: Punycode-konverterer
+    description: Konverter internasjonale Unicode-domenenavn eller e-poster fra/til
+      ASCII Punycode-versjon
+    texts:
+      title-punycode-to-international: Punycode til internasjonalt
+      placeholder-put-your-punycode-domain-name-or-email-to-decode:
+        Skriv inn domenenavnet eller e-postadressen din fra Punycode for å
+        dekode...
+      label-punycode-domain-name-email: Punycode Domenenavn/e-post
+      label-decoded-domain-name-email: Dekodet domenenavn/e-post
+      title-international-to-punycode: Internasjonalt til Punycode
+      placeholder-put-your-international-domain-or-email-name-here: Skriv inn ditt internasjonale domene eller e-postadresse her ...
+      label-domain-name-or-email-to-encode: Domenenavn eller e-post som skal kodes
+
+  morse-converter:
+    title: Morsekodekonverterer
+    description: Kode/dekode til morsekode
+    texts:
+      title-encode: Kode
+      label-your-text: "Teksten din:"
+      placeholder-the-string-to-encode: Strengen som skal kodes
+      label-your-text-encoded-to-morse-code: "Teksten din kodet til morsekode:"
+      placeholder-your-string-encoded: Strengen din er kodet
+      title-decode: Dekode
+      label-your-morse-encoded-text: "Din morsekodede tekst:"
+      placeholder-the-string-to-decode: Strengen som skal dekodes
+      title-error-while-decoding: Feil under dekoding
+      label-your-decoded-text: "Din dekodede tekst:"
+      placeholder-your-string-decoded: Strengen din ble dekodet
+
+  list-comparer:
+    title: Lister Sammenlign
+    description: Sammenlign to listeelementer
+    texts:
+      label-trim-items: Trim elementer
+      label-ignore-case: Ignorer store og små bokstaver
+      label-separator: Separator
+      placeholder-additional-separator: Ekstra separator
+      label-list-1: Liste 1
+      label-list-2: Liste 2
+      title-items-in-both-lists: Elementer i begge listene
+      title-items-in-list-1-but-not-in-list-2: Elementer i liste 1, men ikke i liste 2
+      title-items-in-list-2-but-not-in-list-1: Elementer i liste 2, men ikke i liste 1
+
+  smart-text-replacer:
+    title: Smart teksterstatning og linjebryter
+    description: Søk og erstatt et ord én eller flere ganger, akkurat som søk og
+      erstatt i Windows Notisblokk. Tillater også linjeskift og tekstdeling.
+    texts:
+      label-add-linebreak-before: Legg til linjeskift før
+      label-add-linebreak-after: Legg til linjeskift etter
+      label-add-linebreak-in-place-of: Legg til linjeskift i stedet for
+      placeholder-enter-text-here: Skriv inn tekst her...
+      label-text-to-search-and-replace: "Tekst som skal søkes og erstattes:"
+      placeholder-search-regex: Søk etter regex
+      placeholder-replacement-expression: Erstatningsuttrykk
+      placeholder-split-text-regex: Delt tekst regex
+      label-split-every-characters: "Del alle tegnene:"
+      tag-find-what: "Finn hva:"
+      tag-replace-with: "Erstatt med:"
+      tag-find-next: Finn neste
+      tag-replace: Erstatt
+      tag-replace-all: Erstatt alle
+      tag-match-case: Match-etuiet
+      tag-keep-linebreaks: Behold linjeskift
+
+  sensitive-data-masker:
+    title: Maskering av sensitive data
+    description: Fjern sensitive data fra tekstinnhold (f.eks. logger)
+    texts:
+      label-your-custom-cleaning-regex-es-case-insensitive: "Dine tilpassede rengjøringsregekser (ikke store og små bokstaver):"
+      placeholder-your-custom-cleaning-regex-es: Dine tilpassede rengjøringsregeks(er)
+      placeholder-no-fallback: Ingen reserve
+      input-label-your-log-textual-data: "Dine logg-/tekstdata:"
+      input-placeholder-paste-your-log-textual-data-here: Lim inn logg-/tekstdataene dine her...
+      output-label-cleaned-version: "Rengjort versjon:"
+
+  htpasswd-generator:
+    title: Htpasswd/htaccess-generator
+    description: htpassword/htaccess bruker/passordgenerator
+    texts:
+      label-bcrypt: Bcrypt
+      label-md5: MD5
+      label-apache-md5-apr1: Apache MD5 (apr1)
+      label-sha256: SHA256
+      label-sha512: SHA512
+      label-username: Brukernavn
+      placeholder-your-username: Brukernavnet ditt...
+      label-password: Passord
+      placeholder-your-password: Passordet ditt...
+      label-hash-method: "Hash-metode:"
+      label-salt-rounds: "Saltrunder: "
+      placeholder-salt-rounds: Saltrunder...
+      label-htpasswd-content: "htpasswd-innhold:"
+    service:
+      text:
+        unsupported-algorithm: Ikke-støttet algoritme
+        md5-does-not-currently-support-non-ascii-characters-0: MD5 støtter for øyeblikket ikke tegn som ikke er ASCII
+        md5-does-not-currently-support-non-ascii-characters: MD5 støtter for øyeblikket ikke tegn som ikke er ASCII
+
+  crc-calculator:
+    title: CRC-kalkulator
+    description: Beregn tekst- eller fil-CRC (CRC1, CRC8, CRC8 1-Wire, CRC8 DVB-S2,
+      CRC16, CRC16 CCITT, CRC16 Modbus, CRC16 Kermit, CRC16 XModem, CRC24,
+      CRC32, CRC32 MPEG-2, CRCJAM)
+    texts:
+      label-binary-base-2: Binær (base 2)
+      label-hexadecimal-base-16: Heksadesimal (grunntall 16)
+      label-base64-base-64: Base64 (base 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 med sikre URL-tegn)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Dra og slipp en fil hit, eller klikk for å velge en fil
+      placeholder-paste-string-to-crc: Lim inn streng i CRC...
+      label-your-text-to-crc: "Teksten din til CRC:"
+      label-digest-encoding: Digest-koding
+      tag-or: ELLER
+      tag-an-error-occured-hashing-file: Det oppsto en feil under hashing av filen.
+
+  file-hasher:
+    title: Filhasher
+    description: Beregn hash av filer
+    texts:
+      label-binary-base-2: Binær (base 2)
+      label-hexadecimal-base-16: Heksadesimal (grunntall 16)
+      label-base64-base-64: Base64 (base 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (base 64 med sikre URL-tegn)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Dra og slipp en fil hit, eller klikk for å velge en fil
+      label-digest-encoding: Digest-koding
+      tag-createblake2b-bits-number-key-idatatype-promise: "createBLAKE2b, // (bits?: tall, nøkkel?: IDataType): Løfte"
+      tag-createmd5-promise: "createMD5, // (): Løfte"
+      tag-createripemd160-promise: "createRIPEMD160, // (): Løfte"
+      tag-createsha1-promise: "createSHA1, // (): Løfte"
+      tag-createsha224-promise: "createSHA224, // (): Løfte"
+      tag-createsha256-promise: "createSHA256, // (): Løfte"
+      tag-createsha512-promise: "createSHA512, // (): Løfte"
+      tag-createsm3-promise: "createSM3, // (): Løfte"
+      tag-createwhirlpool-promise: "createWhirlpool, // (): Løfte"
+      tag-createxxhash32-seed-number-promise: "// createXXHash32, //(frø: tall): Løfte"
+      tag-createxxhash64-seedlow-number-seedhigh-number-promise: "// createXXHash64, //(seedLow: tall, seedHigh: tall): Løfte"
+      tag-createxxhash3-seedlow-number-seedhigh-number-promise: "// createXXHash3, //(seedLow: tall, seedHigh: tall): Løfte"
+      tag-createxxhash128-seedlow-number-seedhigh-number-promise: "// createXXHash128, //(seedLow: tall, seedHigh: tall): Løfte"
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise:
+        "BLAKE2b: await createBLAKE2b(), // (bits?: tall, nøkkel?: IDataType):
+        Løfte"
+      tag-md5-await-createmd5-promise: "MD5: avvent createMD5(), // (): Løfte"
+      tag-ripemd160-await-createripemd160-promise: "RIPEMD160: venter på createRIPEMD160(), // (): Løfte"
+      tag-sha1-await-createsha1-promise: "SHA1: avvent createSHA1(), // (): Løfte"
+      tag-sha224-await-createsha224-promise: "SHA224: avvent createSHA224(), // (): Løfte"
+      tag-sha256-await-createsha256-promise: "SHA256: avvent createSHA256(), // (): Løfte"
+      tag-sha512-await-createsha512-promise: "SHA512: avvent createSHA512(), // (): Løfte"
+      tag-sm3-await-createsm3-promise: "SM3: avvent createSM3(), // (): Løfte"
+      tag-whirlpool-await-createwhirlpool-promise: "Whirlpool: await createWhirlpool(), // (): Løfte"
+
+  argon2-hash:
+    title: Argon2 Hasher
+    description: Beregn Argon2-hasher med parametere
+    texts:
+      label-argon2id: Argon2id
+      label-argon2i: Argon2i
+      label-argon2d: Argon2d
+      label-hex: Heksagon
+      label-encoded: Kodet
+      label-binary: Binær
+      label-algorithm: "Algoritme:"
+      label-password: "Passord:"
+      placeholder-enter-password: Skriv inn passord
+      label-salt-hex: "Salt (heks):"
+      placeholder-optional-hex-salt: Valgfritt heksadesimalt salt
+      label-iterations: "Iterasjoner:"
+      label-memory-kib: "Minne (KiB):"
+      label-parallelism: "Parallellisme:"
+      label-hash-length: "Hash-lengde:"
+      label-output-type: "Utgangstype:"
+      title-argon2-hash: Argon2 Hash
+      tag-generate: Generere
 
   password-strength-analyser:
     title: Analyseverktøy for passordstyrke

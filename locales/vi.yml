@@ -66,10 +66,508 @@ tools:
     images and videos: 'Hình ảnh & Video'
     development: Phát triển
     network: Mạng
+    date & time: 'Ngày và giờ'
     math: Toán học
     measurement: Đo lường
     text: Văn bản
     data: Dữ liệu
+
+  json-to-typescript:
+    title: Json sang Typescript
+    description: Chuyển đổi JSON sang mã Typescript
+    texts:
+      message-provided-json-is-not-valid: JSON được cung cấp không hợp lệ.
+      title-json-to-typescript: JSON sang Typescript
+      placeholder-put-your-json-string-here: Đặt chuỗi json của bạn vào đây...
+      label-json-to-typescript: JSON sang Typescript
+      label-root-name: Tên gốc
+      title-your-typescript-code: Mã Typescript của bạn
+      tag-use-interfaces-only: Chỉ sử dụng giao diện
+      tag-transform-property-names-to-javascripty: Chuyển đổi tên thuộc tính thành JavaScripty
+      tag-explicitly-name-unions: Đặt tên rõ ràng cho các công đoàn
+      tag-verify-json-parse-results-at-runtime: Xác minh kết quả JSON.parse khi chạy
+      tag-use-union-type-instead-of-enum: Sử dụng Union Type thay vì Enum
+      tag-use-types-instead-of-interfaces: Sử dụng Kiểu thay vì Giao diện
+      tag-use-string-instead-of-enum-for-single-value-enums: Sử dụng String thay vì Enum cho Enum giá trị đơn
+      tag-use-readonly-type-members: Sử dụng thành viên loại chỉ đọc
+      tag-make-all-properties-optional: Làm cho tất cả các thuộc tính trở thành tùy chọn
+
+  passphrase-generator:
+    title: Trình tạo mật khẩu
+    description: Tạo mật khẩu ngẫu nhiên có thể ghi nhớ
+    texts:
+      text-passphrase-s-copied-to-clipboard: Mật khẩu đã được sao chép vào bảng nhớ tạm!
+      label-add-numbers-after-x-words: Thêm số sau X từ
+      label-max-passphrase-len: Mật khẩu tối đa len
+      label-capitalize: Viết hoa
+      label-separator: Bộ tách
+      placeholder-put-separator-char: Đặt dấu phân cách char
+      label-ending-salt-chars: Kết thúc Salt Chars
+      placeholder-put-characters-to-appended-to-end-of-passphrase: Thêm các ký tự vào cuối cụm mật khẩu
+      label-number-of-passphrase-to-generate: Số lượng mật khẩu cần tạo
+      placeholder-passphrase: Mật khẩu...
+      tag-copy: Sao chép
+      tag-refresh: Làm cho khỏe lại
+      cannot-generate-a-passphrase-of-minlen-value-maxlen-value-characters-please-retry:
+        "# Không thể tạo mật khẩu có độ dài [{0} - {1}] ký tự với cài đặt hiện
+        tại, hãy thử thay đổi số lượng từ."
+      words-words: Từ ({0})
+      label-min-passphrase-len: "Độ dài mật khẩu tối thiểu:"
+
+  luhn-validator:
+    title: Trình xác thực Luhn
+    description: Kiểm tra và tạo khóa cho mã định danh được xác thực bằng mã kiểm tra Luhn
+    texts:
+      label-is-valid: Có hợp lệ không?
+      label-luhn-key: Luhn Key
+      label-value-with-luhn-key: Giá trị với Luhn Key
+      placeholder-enter-a-luhn-validated-value: Nhập giá trị &#39;Luhn đã xác thực&#39;...
+      label-probably-correct: Có lẽ đúng
+      title-infos: Thông tin
+      tag-invalid-luhn-key: Khóa Luhn không hợp lệ.
+
+  sla-calculator:
+    title: Máy tính SLA
+    description: Máy tính Thỏa thuận Mức độ Dịch vụ
+    texts:
+      message-invalid-duration: Thời lượng không hợp lệ
+      title-sla-to-downtimes: SLA cho thời gian ngừng hoạt động
+      label-agreed-sla: SLA đã thỏa thuận
+      label-daily-downtime: Thời gian ngừng hoạt động hàng ngày
+      label-weekly-downtime: Thời gian ngừng hoạt động hàng tuần
+      label-monthly-downtime: Thời gian ngừng hoạt động hàng tháng
+      label-quarterly-downtime: Thời gian ngừng hoạt động hàng quý
+      label-yearly-downtime: Thời gian ngừng hoạt động hàng năm
+      title-downtime-to-sla: Thời gian ngừng hoạt động theo SLA
+      label-downtime-duration: Thời gian ngừng hoạt động
+      placeholder-put-downtime-duration-here: Nhập thời gian ngừng hoạt động ở đây...
+      label-daily-sla: SLA hàng ngày
+      label-weekly-sla: SLA hàng tuần
+      label-monthly-sla: SLA hàng tháng
+      label-quarterly-sla: SLA hàng quý
+      label-yearly-sla: SLA hàng năm
+      title-weekdays-hours: Giờ làm việc trong tuần
+      label-monday: Thứ hai
+      label-tuesday: Thứ ba
+      label-wednesday: Thứ Tư
+      label-thursday: Thứ năm
+      label-friday: Thứ sáu
+      label-saturday: Thứ bảy
+      label-sunday: Chủ nhật
+
+  many-units-converter:
+    title: Bộ chuyển đổi nhiều đơn vị
+    description: Chuyển đổi tất cả các loại đơn vị
+    texts:
+      label-units-expression: Biểu thức đơn vị
+      placeholder-please-enter-an-unit-expression-ie-1d-2m: "Vui lòng nhập biểu thức đơn vị, ví dụ: &#39;1d 2m&#39;"
+      label-target-unit: "Đơn vị mục tiêu:"
+      placeholder-select-the-target-unit: Chọn đơn vị mục tiêu
+      title-result: Kết quả
+      label-best-target-unit: Đơn vị mục tiêu tốt nhất
+      label-selected-target-unit-outputunit: Đơn vị mục tiêu đã chọn ({0})
+      title-other-units-conversion-tools: Các công cụ chuyển đổi đơn vị khác
+
+  duration-calculator:
+    title: Máy tính thời lượng
+    description: Tính toán/phân tích thời lượng
+    texts:
+      label-duration-s: Thời lượng
+      placeholder-please-enter-duration-one-per-line-with-optional-sign: Vui lòng nhập thời lượng, mỗi dòng một khoảng thời gian với dấu tùy chọn
+      title-total: Tổng cộng
+      label-prettified: Làm đẹp
+      label-prettified-full: Làm đẹp (đầy đủ)
+      label-prettified-colon: Làm đẹp (dấu hai chấm)
+      label-prettified-days: Làm đẹp (ngày)
+      label-prettified-hours: Làm đẹp (giờ)
+      label-prettified-iso8601: Làm đẹp (ISO8601)
+      label-milliseconds: Mili giây
+      label-seconds: Giây
+      label-minutes: Phút
+      label-hours: Giờ
+      label-days: Ngày
+      label-weeks: Tuần
+      label-years: Năm
+      title-lines-errors: Lỗi dòng
+      tag-supports-comment-line-hh-mm-ss-fff-3d-1h-3s-p4dt12h20m20-3s:
+        "Hỗ trợ: chú thích (dòng #), HH:MM:SS.FFF, 3d 1h 3s...,
+        P4DT12H20M20.3S.."
+
+  timezone-converter:
+    title: Bộ chuyển đổi múi giờ
+    description: Chuyển đổi Ngày-Giờ từ múi giờ này sang múi giờ khác và lấy thông
+      tin múi giờ so với quốc gia
+    texts:
+      title-timezones-date-time-converter: Bộ chuyển đổi ngày giờ múi giờ
+      label-timezone: Múi giờ
+      label-date-time-interval-to-convert: "Khoảng thời gian ngày/giờ để chuyển đổi:"
+      label-current-timezone-offset: "Độ lệch múi giờ hiện tại:"
+      label-use-24-hour-time-format: Sử dụng định dạng thời gian 24 giờ
+      title-date-time-in-other-timezones: Ngày-Giờ trong các múi giờ khác
+      placeholder-please-select-a-timezone: Vui lòng chọn múi giờ
+      title-country-to-timezones: Quốc gia thành Múi giờ
+      label-country: Quốc gia
+      title-timezones-to-countries: Múi giờ đến các quốc gia
+
+  port-numbers:
+    title: Số cổng
+    description: Tìm kiếm mục đích sử dụng được chỉ định của một cổng và giao thức nhất định
+    texts:
+      label-tcp: Giao thức TCP
+      label-udp: UDP
+      title-port-search: Tìm kiếm cổng
+      label-port-number: Số cổng
+      label-protocol: Giao thức
+      label-type: Kiểu
+      label-description: Sự miêu tả
+
+  url-cleaner:
+    title: Trình dọn dẹp URL
+    description: Dọn dẹp các thông số theo dõi quảng cáo, UTM, Facebook và các nhà
+      cung cấp quảng cáo khác từ một URL
+    texts:
+      title-clean-url: URL sạch
+      placeholder-put-your-url-here: Đặt url của bạn ở đây...
+      label-url-to-clean: Url để làm sạch
+      label-cleaned-url: Đã dọn dẹp url
+      placeholder-the-cleaned-url-will-be-here: URL đã được dọn dẹp sẽ ở đây
+      tag-is-clean: Sạch sẽ
+      tag-was-not-clean: Không sạch sẽ
+
+  ip-range-to-cidr:
+    title: Máy tính phạm vi IPv4/6 đến CIDR(s)
+    description: Tính toán CIDR(s) từ một phạm vi IP (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-address: Địa chỉ ipv4/6 không hợp lệ
+      label-start-address: Địa chỉ bắt đầu
+      placeholder-start-ipv4-6-address: Bắt đầu địa chỉ IPv4/6...
+      label-end-address: Địa chỉ cuối
+      placeholder-end-ipv4-6-address: Kết thúc địa chỉ IPv4/6...
+      title-cidr: CIDR
+      title-invalid-combination-of-start-and-end-ipv4-6-address: Sự kết hợp không hợp lệ của địa chỉ IPv4/6 bắt đầu và kết thúc
+      title-invalid-combination-of-ip-version-4-6: Sự kết hợp không hợp lệ của phiên bản IP 4/6
+      tag-switch-start-and-end-ipv4-6-address: Chuyển đổi địa chỉ IPv4/6 bắt đầu và kết thúc
+      tag-start-ip-and-end-ip-must-be-of-same-version-ipv4-or-ipv6: "IP bắt đầu và IP kết thúc phải cùng phiên bản: IPv4 hoặc IPv6"
+
+  ip-cidr-to-range:
+    title: Máy tính phạm vi CIDR sang IP của Ipv4/6
+    description: Tính toán phạm vi IP từ CIDR (IPv4/6)
+    texts:
+      message-invalid-ipv4-6-cidr: CIDR ipv4/6 không hợp lệ
+      label-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (tức là 1.0.0.0/23 hoặc 1.1.1.1/255.255.252.0 hoặc
+        1.1.1.1-2.2.2.2 hoặc 10.0.0.*)
+      placeholder-ipv4-6-cidr-ie-1-0-0-0-23-or-1-1-1-1-255-255-252-0-or-1-1-1-1-2-2-2-2-or-10-0-0:
+        IPv4/6 CIDR (tức là 1.0.0.0/23 hoặc 1.1.1.1/255.255.252.0 hoặc
+        1.1.1.1-2.2.2.2 hoặc 10.0.0.*)
+      title-resulting-cidr: CIDR kết quả
+      label-cidr: CIDR
+      title-ipv4-6-range: Phạm vi IPv4/6
+      label-start-ip-address: Địa chỉ IP bắt đầu
+      label-end-ip-address: Địa chỉ IP cuối
+      label-network-type: Loại mạng
+
+  ipv6-subnet-calculator:
+    title: Máy tính mạng con IPv6
+    description: Phân tích các khối CIDR IPv6 của bạn và lấy mọi thông tin bạn cần
+      về mạng con của mình.
+    texts:
+      message-we-cannot-parse-this-address-check-the-format: Chúng tôi không thể phân tích địa chỉ này, hãy kiểm tra định dạng
+      label-full-address: Địa chỉ đầy đủ
+      label-short-address: Địa chỉ ngắn
+      label-address-as-binary: Địa chỉ dưới dạng nhị phân
+      label-address-as-integer: Địa chỉ dưới dạng số nguyên
+      label-address-as-decimal: Địa chỉ dưới dạng thập phân
+      label-address-as-hex: Địa chỉ dưới dạng hex
+      label-network-mask-size: Kích thước mặt nạ mạng
+      label-network-mask: Mặt nạ mạng
+      label-network-mask-as-integer: Mặt nạ mạng dưới dạng số nguyên
+      label-network-mask-as-binary: Mặt nạ mạng dưới dạng nhị phân
+      label-total-ip-addresses: Tổng số địa chỉ IP
+      label-total-networks: Tổng số mạng
+      label-first-address: Địa chỉ đầu tiên
+      label-last-address: Địa chỉ cuối cùng
+      label-scope: Phạm vi
+      label-6to4-properties: Thuộc tính 6to4
+      label-teredo-properties: Teredo Properties
+      label-arpa: ARPA
+      label-microsoft-unc-transcription: Phiên âm Microsoft UNC
+      label-type: Kiểu
+      label-an-ipv6-address-with-or-without-mask: Địa chỉ IPv6 có hoặc không có mặt nạ
+      placeholder-the-ipv6-address: Địa chỉ IPv6...
+
+  markdown-toc-generator:
+    title: Trình tạo mục lục Markdown
+    description: Tạo mục lục từ tệp/nội dung đánh dấu
+    texts:
+      title-options: Tùy chọn
+      label-max-heading-level: "Mức tiêu đề tối đa:"
+      placeholder-max-heading-level: Mức tiêu đề tối đa...
+      label-bullet-chars: Ký tự dấu đầu dòng
+      placeholder-bullet-chars: Ký tự dấu đầu dòng
+      label-anchors-prefix: Tiền tố mỏ neo
+      placeholder-anchors-prefix: Tiền tố mỏ neo
+      label-indents: "Thụt lề: "
+      placeholder-indents: Dấu thụt lề...
+      label-comment-styles: Kiểu bình luận
+      placeholder-comment-styles: Kiểu bình luận
+      title-input-markdown: Đầu vào markdown
+      placeholder-put-your-markdown-here: Đặt mức giảm giá của bạn ở đây...
+      title-output-markdown-with-toc: Đầu ra markdown với TOC
+      tag-generate-anchors: Tạo neo
+      tag-advanced: Trình độ cao
+      tag-concat-spaces: Khoảng cách concat
+      tag-you-can-paste-a-document-with-existing-toc-generated-by-this-tool-or-add-a:
+        Bạn có thể dán một tài liệu với TOC hiện có (được tạo bởi công cụ này)
+        hoặc thêm một
+      tag-marker-in-your-document-on-a-single-line: đánh dấu trong tài liệu của bạn (trên một dòng)
+
+  html-cleaner:
+    title: Trình dọn dẹp HTML
+    description: HTML sạch
+    texts:
+      placeholder-your-html-content: Nội dung HTML của bạn...
+      label-your-html-to-clean-can-paste-from-clipboard: "HTML của bạn cần xóa (có thể dán từ bảng tạm):"
+      label-output-cleaned-html: "Đầu ra HTML đã được làm sạch:"
+
+  json-sort-master:
+    title: Sắp xếp JSON
+    description: Sắp xếp JSON của bạn theo các khóa và giá trị.
+    texts:
+      message-provided-json-is-not-valid: JSON được cung cấp không hợp lệ.
+      label-key-name: "Tên khóa:"
+      label-key-value: Giá trị chính
+      label-key-name-descending: Tên khóa (Giảm dần)
+      label-key-value-descending: Giá trị khóa (Giảm dần)
+      label-sort-method: Phương pháp sắp xếp
+      label-your-raw-json: JSON thô của bạn
+      placeholder-paste-your-raw-json-here: Dán JSON thô của bạn vào đây...
+      label-sorted-version-of-your-json: Phiên bản đã sắp xếp của JSON của bạn
+
+  json-escaper:
+    title: Json Escaper/Unescaper
+    description: Thoát và bỏ thoát chuỗi JSON
+    texts:
+      title-escape-json-string: Chuỗi JSON thoát
+      placeholder-put-your-string-to-escape: Đặt dây của bạn để thoát ra...
+      label-string-to-escape: Chuỗi để thoát
+      label-escaped-string: Chuỗi thoát
+      title-unescape-json-string: Chuỗi JSON Unescape
+      placeholder-put-your-string-to-unescape: Đưa dây của bạn vào chế độ thoát...
+      label-string-to-unescape: Chuỗi để bỏ thoát
+      label-unescaped-string: Chuỗi không thoát
+      label-wrap-in-quotes: Đặt trong dấu ngoặc kép
+
+  json-to-schema:
+    title: Json thành Schema
+    description: Chuyển đổi dữ liệu JSON sang JSON Schema, MySQL DDL, Mongoose
+      Schema, Google BigQuery schema hoặc ClickHouse Table Schema
+    texts:
+      label-generic: Chung chung
+      label-json-schema: Sơ đồ JSON
+      label-mysql-table-schema: Sơ đồ bảng MySQL
+      label-mongoose-schema: Sơ đồ Mongoose
+      label-google-bigquery-schema: Sơ đồ Google BigQuery
+      label-clickhouse-table-schema: Sơ đồ bảng ClickHouse
+      message-provided-json-is-not-valid: JSON được cung cấp không hợp lệ.
+      placeholder-target-schema-format: Định dạng lược đồ mục tiêu
+      label-table-name: Tên bảng
+      placeholder-table-name: Tên bảng
+      input-label-your-json: JSON của bạn
+      input-placeholder-paste-your-json-here: Dán JSON của bạn vào đây...
+      output-label-your-schema: Sơ đồ của bạn
+
+  html-to-markdown:
+    title: HTML để đánh dấu
+    description: Chuyển đổi HTML (từ clipboard) sang Markdown
+    texts:
+      placeholder-your-html-content: Nội dung HTML của bạn...
+      label-your-html-to-convert-can-paste-from-clipboard: "HTML của bạn cần chuyển đổi (có thể dán từ bảng tạm):"
+      label-output-markdown: "Đầu ra markdown:"
+      label-heading-style: "Kiểu tiêu đề:"
+      label-emphasis-style: "Phong cách nhấn mạnh:"
+      label-hash: Dấu thăng (#)
+      label-underline: Gạch chân (=/-)
+      label-surround-heading: Vòm (= Tiêu đề =)
+      label-asterisk: Dấu hoa thị (*)
+      label-underscore: Dấu gạch dưới (_)
+      label-tilde: Dấu ngã (~)
+
+  punycode-converter:
+    title: Bộ chuyển đổi Punycode
+    description: Chuyển đổi tên miền unicode quốc tế hoặc email từ/sang ASCII phiên
+      bản Punycode
+    texts:
+      title-punycode-to-international: Punycode đến Quốc tế
+      placeholder-put-your-punycode-domain-name-or-email-to-decode: Nhập tên miền punycode hoặc email của bạn để giải mã...
+      label-punycode-domain-name-email: Tên miền/Email Punycode
+      label-decoded-domain-name-email: Tên miền/Email đã giải mã
+      title-international-to-punycode: Quốc tế đến Punycode
+      placeholder-put-your-international-domain-or-email-name-here: Đặt tên miền quốc tế hoặc tên email của bạn ở đây...
+      label-domain-name-or-email-to-encode: Tên miền hoặc email để mã hóa
+
+  morse-converter:
+    title: Bộ chuyển đổi mã Morse
+    description: Mã hóa/Giải mã thành mã Morse
+    texts:
+      title-encode: Mã hóa
+      label-your-text: "Văn bản của bạn:"
+      placeholder-the-string-to-encode: Chuỗi để mã hóa
+      label-your-text-encoded-to-morse-code: "Văn bản của bạn được mã hóa thành mã Morse:"
+      placeholder-your-string-encoded: Chuỗi của bạn được mã hóa
+      title-decode: Giải mã
+      label-your-morse-encoded-text: "Văn bản được mã hóa Morse của bạn:"
+      placeholder-the-string-to-decode: Chuỗi để giải mã
+      title-error-while-decoding: Lỗi khi giải mã
+      label-your-decoded-text: "Văn bản đã giải mã của bạn:"
+      placeholder-your-string-decoded: Chuỗi của bạn đã được giải mã
+
+  list-comparer:
+    title: So sánh danh sách
+    description: So sánh hai mục danh sách
+    texts:
+      label-trim-items: Cắt bớt các mục
+      label-ignore-case: Bỏ qua trường hợp
+      label-separator: Bộ tách
+      placeholder-additional-separator: Bộ tách bổ sung
+      label-list-1: Danh sách 1
+      label-list-2: Danh sách 2
+      title-items-in-both-lists: Các mục trong cả hai danh sách
+      title-items-in-list-1-but-not-in-list-2: Các mục trong Danh sách 1 nhưng không có trong Danh sách 2
+      title-items-in-list-2-but-not-in-list-1: Các mục trong Danh sách 2 nhưng không có trong Danh sách 1
+
+  smart-text-replacer:
+    title: Trình thay thế văn bản thông minh và ngắt dòng
+    description: Tìm kiếm và thay thế một từ khi xuất hiện một hoặc nhiều lần, giống
+      như tìm kiếm và thay thế trên Windows Notepad. Ngoài ra còn cho phép quản
+      lý việc ngắt dòng và tách văn bản.
+    texts:
+      label-add-linebreak-before: Thêm ngắt dòng trước
+      label-add-linebreak-after: Thêm ngắt dòng sau
+      label-add-linebreak-in-place-of: Thêm ngắt dòng thay cho
+      placeholder-enter-text-here: Nhập văn bản vào đây...
+      label-text-to-search-and-replace: "Văn bản để tìm kiếm và thay thế:"
+      placeholder-search-regex: Tìm kiếm regex
+      placeholder-replacement-expression: Biểu thức thay thế
+      placeholder-split-text-regex: Biểu thức chính quy chia tách văn bản
+      label-split-every-characters: "Tách từng ký tự:"
+      tag-find-what: "Tìm gì:"
+      tag-replace-with: "Thay thế bằng:"
+      tag-find-next: Tìm tiếp theo
+      tag-replace: Thay thế
+      tag-replace-all: Thay thế tất cả
+      tag-match-case: Hộp đựng đồ
+      tag-keep-linebreaks: Giữ lại ngắt dòng
+
+  sensitive-data-masker:
+    title: Che giấu dữ liệu nhạy cảm
+    description: "Xóa dữ liệu nhạy cảm khỏi nội dung văn bản (ví dụ: nhật ký)"
+    texts:
+      label-your-custom-cleaning-regex-es-case-insensitive: "Biểu thức chính quy dọn
+        dẹp tùy chỉnh của bạn (không phân biệt chữ hoa chữ thường):"
+      placeholder-your-custom-cleaning-regex-es: Biểu thức chính quy dọn dẹp tùy chỉnh của bạn
+      placeholder-no-fallback: Không có sự dự phòng
+      input-label-your-log-textual-data: "Nhật ký/dữ liệu văn bản của bạn:"
+      input-placeholder-paste-your-log-textual-data-here: Dán dữ liệu nhật ký/văn bản của bạn vào đây...
+      output-label-cleaned-version: "Phiên bản đã được làm sạch:"
+
+  htpasswd-generator:
+    title: Trình tạo htpasswd/htaccess
+    description: trình tạo người dùng/mật khẩu htpassword/htaccess
+    texts:
+      label-bcrypt: Bcrypt
+      label-md5: MD5
+      label-apache-md5-apr1: Apache MD5 (apr1)
+      label-sha256: SHA256
+      label-sha512: SHA512
+      label-username: Tên người dùng
+      placeholder-your-username: Tên người dùng của bạn...
+      label-password: Mật khẩu
+      placeholder-your-password: Mật khẩu của bạn...
+      label-hash-method: "Phương pháp băm:"
+      label-salt-rounds: "Vòng muối: "
+      placeholder-salt-rounds: Bánh muối tròn...
+      label-htpasswd-content: "nội dung htpasswd:"
+    service:
+      text:
+        unsupported-algorithm: Thuật toán không được hỗ trợ
+        md5-does-not-currently-support-non-ascii-characters-0: MD5 hiện không hỗ trợ các ký tự không phải ASCII
+        md5-does-not-currently-support-non-ascii-characters: MD5 hiện không hỗ trợ các ký tự không phải ASCII
+
+  crc-calculator:
+    title: Máy tính CRC
+    description: Tính toán CRC văn bản hoặc tệp (CRC1, CRC8, CRC8 1-Wire, CRC8
+      DVB-S2, CRC16, CRC16 CCITT, CRC16 Modbus, CRC16 Kermit, CRC16 XModem,
+      CRC24, CRC32, CRC32 MPEG-2, CRCJAM)
+    texts:
+      label-binary-base-2: Nhị phân (cơ số 2)
+      label-hexadecimal-base-16: Hệ thập lục phân (cơ số 16)
+      label-base64-base-64: Base64 (cơ số 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (cơ số 64 với các ký tự an toàn cho url)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Kéo và thả một tập tin vào đây hoặc nhấp để chọn một tập tin
+      placeholder-paste-string-to-crc: Dán chuỗi vào CRC...
+      label-your-text-to-crc: "Văn bản của bạn gửi tới CRC:"
+      label-digest-encoding: Mã hóa tóm tắt
+      tag-or: HOẶC
+      tag-an-error-occured-hashing-file: Đã xảy ra lỗi khi băm tệp.
+
+  file-hasher:
+    title: File Hasher
+    description: Tính toán băm của các tập tin
+    texts:
+      label-binary-base-2: Nhị phân (cơ số 2)
+      label-hexadecimal-base-16: Hệ thập lục phân (cơ số 16)
+      label-base64-base-64: Base64 (cơ số 64)
+      label-base64url-base-64-with-url-safe-chars: Base64url (cơ số 64 với các ký tự an toàn cho url)
+      title-drag-and-drop-a-file-here-or-click-to-select-a-file: Kéo và thả một tập tin vào đây hoặc nhấp để chọn một tập tin
+      label-digest-encoding: Mã hóa tóm tắt
+      tag-createblake2b-bits-number-key-idatatype-promise: "createBLAKE2b, // (bit?: số, khóa?: IDataType): Promise"
+      tag-createmd5-promise: "createMD5, // (): Lời hứa"
+      tag-createripemd160-promise: "createRIPEMD160, // (): Lời hứa"
+      tag-createsha1-promise: "createSHA1, // (): Lời hứa"
+      tag-createsha224-promise: "createSHA224, // (): Lời hứa"
+      tag-createsha256-promise: "createSHA256, // (): Lời hứa"
+      tag-createsha512-promise: "createSHA512, // (): Lời hứa"
+      tag-createsm3-promise: "createSM3, // (): Lời hứa"
+      tag-createwhirlpool-promise: "createWhirlpool, // (): Lời hứa"
+      tag-createxxhash32-seed-number-promise: "// createXXHash32, //(seed: số): Lời hứa"
+      tag-createxxhash64-seedlow-number-seedhigh-number-promise: "// createXXHash64, //(seedLow: số, seedHigh: số): Lời hứa"
+      tag-createxxhash3-seedlow-number-seedhigh-number-promise: "// createXXHash3, //(seedLow: số, seedHigh: số): Lời hứa"
+      tag-createxxhash128-seedlow-number-seedhigh-number-promise: "// createXXHash128, //(seedLow: số, seedHigh: số): Lời hứa"
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise:
+        "BLAKE2b: await createBLAKE2b(), // (bit?: số, khóa?: IDataType):
+        Promise"
+      tag-md5-await-createmd5-promise: "MD5: await createMD5(), // (): Promise"
+      tag-ripemd160-await-createripemd160-promise: "RIPEMD160: chờ createRIPEMD160(), // (): Promise"
+      tag-sha1-await-createsha1-promise: "SHA1: await createSHA1(), // (): Promise"
+      tag-sha224-await-createsha224-promise: "SHA224: await createSHA224(), // (): Promise"
+      tag-sha256-await-createsha256-promise: "SHA256: await createSHA256(), // (): Promise"
+      tag-sha512-await-createsha512-promise: "SHA512: await createSHA512(), // (): Promise"
+      tag-sm3-await-createsm3-promise: "SM3: await createSM3(), // (): Promise"
+      tag-whirlpool-await-createwhirlpool-promise: "Whirlpool: await createWhirlpool(), // (): Promise"
+
+  argon2-hash:
+    title: Argon2 Hasher
+    description: Tính toán băm Argon2 với các tham số
+    texts:
+      label-argon2id: Argon2id
+      label-argon2i: Argon2i
+      label-argon2d: Argon2d
+      label-hex: Lục giác
+      label-encoded: Đã mã hóa
+      label-binary: Nhị phân
+      label-algorithm: "Thuật toán:"
+      label-password: "Mật khẩu:"
+      placeholder-enter-password: Nhập mật khẩu
+      label-salt-hex: "Muối (lục giác):"
+      placeholder-optional-hex-salt: Muối lục giác tùy chọn
+      label-iterations: "Lặp lại:"
+      label-memory-kib: "Bộ nhớ (KiB):"
+      label-parallelism: "Sự song song:"
+      label-hash-length: "Độ dài băm:"
+      label-output-type: "Kiểu đầu ra:"
+      title-argon2-hash: Băm Argon2
+      tag-generate: Phát ra
 
   password-strength-analyser:
     title: Bộ phân tích độ mạnh mật khẩu

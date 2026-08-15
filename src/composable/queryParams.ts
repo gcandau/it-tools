@@ -1,8 +1,8 @@
 import { useRouteQuery } from '@vueuse/router';
 import { computed } from 'vue';
-import { useStorage } from '@vueuse/core';
+import { type StorageLike, type UseStorageOptions, useStorage } from '@vueuse/core';
 
-export { useQueryParam, useQueryParamOrStorage };
+export { useITStorage, useQueryParam, useQueryParamOrStorage };
 
 const transformers = {
   number: {
@@ -25,7 +25,12 @@ const transformers = {
   },
 };
 
-function useQueryParam<T>({ name, defaultValue }: { name: string; defaultValue: T }) {
+/**
+ * `tool` is accepted and ignored. Tools ported from the sharevb fork pass it to namespace the value
+ * against that fork's per-tool default-settings store, which this fork does not have; accepting the
+ * property keeps those tools unmodified rather than forcing a diff on every one of them.
+ */
+function useQueryParam<T>({ name, defaultValue }: { tool?: string; name: string; defaultValue: T }) {
   const type = typeof defaultValue;
   const transformer = transformers[type as keyof typeof transformers] ?? transformers.string;
 
@@ -41,7 +46,17 @@ function useQueryParam<T>({ name, defaultValue }: { name: string; defaultValue: 
   });
 }
 
-function useQueryParamOrStorage<T>({ name, storageName, defaultValue }: { name: string; storageName: string; defaultValue: T }) {
+/** Persist a value in local storage. Same signature as `useStorage`, kept for ported tools. */
+function useITStorage<T>(
+  key: string,
+  defaults: T,
+  storage?: StorageLike,
+  options?: UseStorageOptions<T>,
+) {
+  return useStorage<T>(key, defaults, storage, options);
+}
+
+function useQueryParamOrStorage<T>({ name, storageName, defaultValue }: { tool?: string; name: string; storageName: string; defaultValue: T }) {
   const type = typeof defaultValue;
   const transformer = transformers[type as keyof typeof transformers] ?? transformers.string;
 

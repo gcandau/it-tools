@@ -2,6 +2,10 @@ const random = () => Math.random();
 
 const randFromArray = (array: unknown[]) => array[Math.floor(random() * array.length)];
 
+function multiRandFromArray(array: unknown[], length: number) {
+  return Array.from({ length }, () => array[Math.floor(random() * array.length)]);
+}
+
 const randIntFromInterval = (min: number, max: number) => Math.floor(random() * (max - min) + min);
 
 // Durstenfeld shuffle
@@ -22,6 +26,7 @@ const generateRandomId = () => `id-${random().toString(36).substring(2, 12)}`;
 
 export {
   randFromArray,
+  multiRandFromArray,
   randIntFromInterval,
   random,
   shuffleArray,
